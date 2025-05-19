@@ -5,6 +5,7 @@
 package clinicandpharmacymanagement.Dao;
 
 import clinicandpharmacymanagement.Database.MysqlConnection;
+import clinicandpharmacymanagement.controller.ResetController;
 import clinicandpharmacymanagement.view.model.LoginRequest;
 import clinicandpharmacymanagement.view.model.ResetPasswordRequest;
 import clinicandpharmacymanagement.view.model.UserData;
@@ -115,7 +116,7 @@ public class UserDao {
         }
     }
     public boolean resetPassword(ResetPasswordRequest reset){
-        String query="Update user set fpassword=? where email=?";
+        String query="Update users set fpassword=? where email=?";
         Connection conn=mysql.openConnection();
         try{
             PreparedStatement stmnt=conn.prepareStatement(query);
@@ -155,4 +156,38 @@ public class UserDao {
         }
         return users;
     }
+
+       
+    public boolean validateUser(String email, String oldPassword) {
+            String query = "SELECT * FROM users WHERE email = ? AND fpassword = ?";
+            Connection conn=mysql.openConnection();
+            try {
+                PreparedStatement stmt=conn.prepareStatement(query);
+                stmt.setString(1, email);
+                stmt.setString(2, oldPassword);
+
+                ResultSet rs = stmt.executeQuery();
+                return rs.next(); // valid if user found
+            } catch (SQLException e) {
+                
+                return false;
+            }
+        }
+
+        public boolean resetPassword(String email, String newPassword) {
+            String query = "UPDATE users SET fpassword = ? WHERE email = ?";
+            Connection conn=mysql.openConnection();
+            try {
+                PreparedStatement stmt=conn.prepareStatement(query);
+                stmt.setString(1, newPassword);
+                stmt.setString(2, email);
+
+                int updated = stmt.executeUpdate();
+                return updated > 0;
+            } catch (SQLException e) {
+               
+                return false;
+            }
+        }
+    
 }

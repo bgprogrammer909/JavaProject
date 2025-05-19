@@ -4,9 +4,6 @@
  */
 package clinicandpharmacymanagement.view.model;
 
-import java.util.Date;
-
-
 
 /**
  *
@@ -15,75 +12,62 @@ import java.util.Date;
 public class DoctorModel {
     private String id;
     private String name;
-    private String time;
+    private String email;
     private String phone;
+    private String speciality;
+    private String timeFrom;
+    private String timeTo;
 
-    public DoctorModel(String id, String name, String time, String phone) {
-        this.id = id;
+    public DoctorModel(String name, String email, String speciality, String phone, String timeFrom, String timeTo) {
         this.name = name;
-        this.time = time;
+        this.email = email;
+        this.speciality=speciality;
         this.phone = phone;
+        this.timeFrom = timeFrom;
+        this.timeTo = timeTo;
     }
 
-    /**
-     * @return the id
-     */
     public String getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(String id) {
         this.id = id;
     }
 
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public String getEmail() {
+        return email;
     }
 
-    /**
-     * @return the time
-     */
-    public String getTime() {
-        return time;
-    }
-
-    /**
-     * @param time the time to set
-     */
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    /**
-     * @return the phone
-     */
     public String getPhone() {
         return phone;
     }
 
-    /**
-     * @param phone the phone to set
-     */
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public String getTimeFrom() {
+        return timeFrom;
     }
 
-    
-   
+    public String getTimeTo() {
+        return timeTo;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
    
 }
+
+   
+   
+
          
      

@@ -6,6 +6,7 @@ package clinicandpharmacymanagement.view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -31,10 +32,10 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
         registerButton = new javax.swing.JButton();
+        resetEnter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 100));
@@ -43,10 +44,6 @@ public class HomePage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 0));
         jLabel1.setText("Home");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel2.setText("About us");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 0));
@@ -68,6 +65,17 @@ public class HomePage extends javax.swing.JFrame {
         registerButton.setForeground(new java.awt.Color(255, 255, 255));
         registerButton.setText("Be our client");
 
+        resetEnter.setBackground(new java.awt.Color(0, 102, 0));
+        resetEnter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        resetEnter.setForeground(new java.awt.Color(255, 255, 255));
+        resetEnter.setText("Reset Password");
+        resetEnter.setBorder(null);
+        resetEnter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetEnterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -75,30 +83,28 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
+                        .addGap(40, 40, 40)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE))
+                        .addComponent(resetEnter, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
-                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel3))
-                    .addComponent(loginButton))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3)
+                    .addComponent(resetEnter)
+                    .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addComponent(registerButton)
                 .addGap(117, 117, 117))
@@ -121,6 +127,10 @@ public class HomePage extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void resetEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetEnterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resetEnterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,11 +170,11 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginButton;
     private javax.swing.JButton registerButton;
+    private javax.swing.JButton resetEnter;
     // End of variables declaration//GEN-END:variables
 public void loggingIn(ActionListener listener){
     loginButton.addActionListener(listener);
@@ -172,5 +182,10 @@ public void loggingIn(ActionListener listener){
 
 public void register(ActionListener listener){
     registerButton.addActionListener(listener);
+}
+
+public void reseter(ActionListener listener){
+    resetEnter.addActionListener(listener);
+    
 }
 }

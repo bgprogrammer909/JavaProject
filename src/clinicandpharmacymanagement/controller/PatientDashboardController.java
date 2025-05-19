@@ -5,6 +5,7 @@
 package clinicandpharmacymanagement.controller;
 
 import clinicandpharmacymanagement.view.PatientDashboard;
+import clinicandpharmacymanagement.view.SampleCard;
 import clinicandpharmacymanagement.view.model.UserData;
 
 
@@ -14,9 +15,9 @@ import clinicandpharmacymanagement.view.model.UserData;
  * @author ACER
  */
 public class PatientDashboardController {
-    PatientDashboard view;
+    SampleCard view;
     UserData user;
-    public PatientDashboardController(PatientDashboard view,UserData user){
+    public PatientDashboardController(SampleCard view,UserData user){
         this.view=view;
         this.user=user;
     }

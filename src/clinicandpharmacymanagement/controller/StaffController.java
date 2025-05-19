@@ -27,7 +27,7 @@ class Adder implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String id = view.getid().getText();
+        String id = view.getId().getText();
         String name = view.getName().getText();
         String amount = view.getAmount().getText();
         String price = view.getPrice().getText();
@@ -48,9 +48,14 @@ class Adder implements ActionListener {
         }
     }
 }
-
+ public void open(){
+        view.setVisible(true);
+    }
+    public void close(){
+        view.dispose();
+    }
     
     
 }    
     
-}
+
