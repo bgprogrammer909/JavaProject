@@ -13,6 +13,33 @@ import java.sql.*;
  */
 public class MysqlConnection implements DbConnection {
 
+    @Override
+    public Connection openConnection() {
+        String username="root";
+       String password="g0d_0f_bl@ckf13ld";
+       String database="marks";
+       try{
+           Class.forName("com.mysql.jdbc.Driver");
+           Connection conn;
+           conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database,username,password);
+           return conn;
+       }catch (Exception e){
+           return null;
+       }
+    }
+
+    @Override
+    public void closeConnection(Connection conn) {
+        try{
+         if(conn!=null && !conn.isClosed()){
+             conn.close();
+         } 
+     }catch(Exception e){
+         
+     }
+    } 
+    }
+
 
    
 }
