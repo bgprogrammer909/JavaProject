@@ -35,7 +35,8 @@ public class HomepageController {
     public void actionPerformed(ActionEvent e){
         
         Registration regView=new Registration();
-        regView.setVisible(true);
+        RegisterController con=new RegisterController(regView);
+        con.open();
         close();
     }
     

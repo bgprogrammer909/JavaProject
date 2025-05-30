@@ -15,6 +15,23 @@ public class UserData {
     private String email;
     private String password;
     private String id;
+    private String utype;
+
+    public UserData( String id,String name, String email, String password, String utype) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.id = id;
+        this.utype = utype;
+    }
+
+    public String getUtype() {
+        return utype;
+    }
+
+    public void setUtype(String utype) {
+        this.utype = utype;
+    }
 
  
 
