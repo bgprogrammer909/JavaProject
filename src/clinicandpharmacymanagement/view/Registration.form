@@ -122,7 +122,7 @@
                               <Component id="jScrollPane2" pref="194" max="32767" attributes="0"/>
                               <Component id="jLabel1" alignment="1" min="-2" pref="166" max="-2" attributes="0"/>
                               <Component id="jScrollPane1" alignment="0" pref="194" max="32767" attributes="0"/>
-                              <Component id="jpassword" alignment="0" max="32767" attributes="0"/>
+                              <Component id="regPassword" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                           <Component id="jcshow" min="-2" pref="62" max="-2" attributes="0"/>
@@ -133,7 +133,7 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="bsignup" min="-2" max="-2" attributes="0"/>
+                  <Component id="registerBtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -158,14 +158,14 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jpassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jcshow" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="18" max="32767" attributes="0"/>
                   <Component id="jctermsandconditions" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="bsignup" min="-2" max="-2" attributes="0"/>
+                  <Component id="registerBtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="41" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -203,7 +203,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="E-mail/Phone"/>
+            <Property name="text" type="java.lang.String" value="E-mail"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -213,7 +213,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jtname">
+            <Component class="javax.swing.JTextPane" name="regName">
             </Component>
           </SubComponents>
         </Container>
@@ -224,7 +224,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jemail">
+            <Component class="javax.swing.JTextPane" name="regMail">
             </Component>
           </SubComponents>
         </Container>
@@ -239,12 +239,12 @@
             <Property name="text" type="java.lang.String" value="Password"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jpassword">
+        <Component class="javax.swing.JPasswordField" name="regPassword">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jpasswordActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regPasswordActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bsignup">
+        <Component class="javax.swing.JButton" name="registerBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="0" type="rgb"/>
@@ -258,7 +258,7 @@
             <Property name="text" type="java.lang.String" value="Sign Up"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bsignupActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jcshow">
