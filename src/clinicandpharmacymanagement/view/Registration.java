@@ -2,7 +2,7 @@ package clinicandpharmacymanagement.view;
 
 
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
+import javax.swing.JCheckBox;
 import javax.swing.JPasswordField;
 import javax.swing.JTextPane;
 
@@ -102,12 +102,6 @@ public class Registration extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 102, 0));
         jLabel4.setText("Password");
 
-        regPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regPasswordActionPerformed(evt);
-            }
-        });
-
         registerBtn.setBackground(new java.awt.Color(0, 102, 0));
         registerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         registerBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,20 +115,10 @@ public class Registration extends javax.swing.JFrame {
         jcshow.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jcshow.setForeground(new java.awt.Color(0, 102, 0));
         jcshow.setText("Show");
-        jcshow.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcshowActionPerformed(evt);
-            }
-        });
 
         jctermsandconditions.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jctermsandconditions.setForeground(new java.awt.Color(0, 102, 0));
         jctermsandconditions.setText("I agree to all terms and conditions");
-        jctermsandconditions.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jctermsandconditionsActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -210,71 +194,22 @@ public class Registration extends javax.swing.JFrame {
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
         // TODO add your handling code here:
-        if (regName.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Please fill out name");
-        }
-        else if(regMail.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Please fill out email");
-        }
-        else if(regPassword.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Please fill out password ");
+//        if (regName.getText().equals("")){
+//            JOptionPane.showMessageDialog(null,"Please fill out name");
+//        }
+//        else if(regMail.getText().equals("")){
+//            JOptionPane.showMessageDialog(null,"Please fill out email");
+//        }
+//        else if(regPassword.getText().equals("")){
+//            JOptionPane.showMessageDialog(null,"Please fill out password ");
             
-        }
-    }//GEN-LAST:event_registerBtnActionPerformed
-
-    private void jcshowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcshowActionPerformed
-        // TODO add your handling code here:
-        if (jcshow.isSelected()){
-            regPassword.setEchoChar((char)0);   
-        }
-        else{
-            regPassword.setEchoChar('*');
-        }
         
-    }//GEN-LAST:event_jcshowActionPerformed
-
-    private void jctermsandconditionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jctermsandconditionsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jctermsandconditionsActionPerformed
-
-    private void regPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regPasswordActionPerformed
+    }//GEN-LAST:event_registerBtnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Registration().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -306,6 +241,9 @@ public class Registration extends javax.swing.JFrame {
     public JTextPane getNameTextField() {
         return regName;
     }
+    public JCheckBox getCheckBox() {
+        return jcshow;
+    }
 
     public JPasswordField getPasswordField() {
         return regPassword;
@@ -314,5 +252,10 @@ public class Registration extends javax.swing.JFrame {
     public void register(ActionListener listener){
         registerBtn.addActionListener(listener);
     }
+    public void showPassword(ActionListener listener){
+        jcshow.addActionListener(listener);
+    }           
+
+   
 
 }
