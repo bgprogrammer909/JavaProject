@@ -240,9 +240,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="regPassword">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regPasswordActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="registerBtn">
           <Properties>
@@ -271,9 +268,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Show"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcshowActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jctermsandconditions">
           <Properties>
@@ -285,9 +279,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="I agree to all terms and conditions"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jctermsandconditionsActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
