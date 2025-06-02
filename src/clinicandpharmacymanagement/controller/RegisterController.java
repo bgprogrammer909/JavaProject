@@ -26,12 +26,35 @@ public class RegisterController {
         this.view=view;
         RegisterUser reg=new RegisterUser();
         this.view.register(reg);
+        ShowPasswordControl pcon=new ShowPasswordControl();
+        this.view.showPassword(pcon);
+//        this.view.showPassword(reg);
 }
     public void open(){
         view.setVisible(true);
     }
     public void close(){
         view.dispose();
+    }
+    class ShowPasswordControl implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // TODO add your handling code here:
+        if (view.getCheckBox().isSelected()){
+            view.getPasswordField().setEchoChar((char)0);   
+        }
+        else{
+             view.getPasswordField().setEchoChar('*');
+        }
+        }
+//        // TODO add your handling code here:
+//        if (view.getCheckBox().isSelected()){
+//            view.getPasswordFeild().setEchoChar((char)0);   
+//        }
+//        else{
+//            regPassword.setEchoChar('*');
+//        }
     }
     class RegisterUser implements ActionListener{
 
