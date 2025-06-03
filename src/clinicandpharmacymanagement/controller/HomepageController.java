@@ -8,6 +8,7 @@ import clinicandpharmacymanagement.view.HomePage;
 import clinicandpharmacymanagement.view.Registration;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import marksapp.java.view.LoginView;
 
 
 /**
@@ -20,7 +21,7 @@ public class HomepageController {
     public HomepageController(HomePage view) {
         this.view=view;
         this.view.register(new GoRegister());
-        
+        this.view.loggingIn(new GoLogin());
     }
     public void open(){
         view.setVisible(true);
@@ -41,4 +42,15 @@ public class HomepageController {
     }
     
 }   
+class GoLogin implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            LoginView logView=new LoginView();
+            LoginController logcon=new LoginController(logView);
+            logcon.open();
+            close();
+        }
+    
+}
 }
