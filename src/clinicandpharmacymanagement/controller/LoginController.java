@@ -49,7 +49,7 @@ public class LoginController {
                 UserData user=ud.login(loginData);
                 if (user==null){
                     JOptionPane.showMessageDialog(view, "logged failed");
-                }else if (user.getUtype().equals("patient")){
+                }else{
                     JOptionPane.showMessageDialog(view, "logged in sucessful");
                     PatientDashboard dashboardView=new PatientDashboard();
                     PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
