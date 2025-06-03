@@ -4,18 +4,16 @@
  */
 package clinicandpharmacymanagement.view;
 
-import javax.swing.JLabel;
-
 /**
  *
  * @author lenovo
  */
-public class AdminDashboardPharma extends javax.swing.JFrame {
+public class AdminDashboardPharma1 extends javax.swing.JFrame {
 
     /**
      * Creates new form MainDashboard
      */
-    public AdminDashboardPharma() {
+    public AdminDashboardPharma1() {
         initComponents();
     }
 
@@ -31,22 +29,13 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        appointment = new javax.swing.JLabel();
-        billing = new javax.swing.JLabel();
-        users = new javax.swing.JLabel();
-        pharmacy = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -62,22 +51,22 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(98, 138, 203));
 
-        appointment.setBackground(new java.awt.Color(138, 174, 224));
-        appointment.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        appointment.setForeground(new java.awt.Color(255, 255, 255));
-        appointment.setText("Appointment ");
+        jLabel2.setBackground(new java.awt.Color(138, 174, 224));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Appointment ");
 
-        billing.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        billing.setForeground(new java.awt.Color(255, 255, 255));
-        billing.setText("Billing ");
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Billing ");
 
-        users.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        users.setForeground(new java.awt.Color(255, 255, 255));
-        users.setText("Patient");
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Patient");
 
-        pharmacy.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        pharmacy.setForeground(new java.awt.Color(57, 88, 134));
-        pharmacy.setText("Pharmacy");
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(57, 88, 134));
+        jLabel5.setText("Pharmacy");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -94,14 +83,14 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(appointment)))
+                        .addComponent(jLabel2)))
                 .addContainerGap(70, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pharmacy, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(users, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(billing, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -110,13 +99,13 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jLabel6)
                 .addGap(37, 37, 37)
-                .addComponent(appointment)
+                .addComponent(jLabel2)
                 .addGap(50, 50, 50)
-                .addComponent(pharmacy)
+                .addComponent(jLabel5)
                 .addGap(50, 50, 50)
-                .addComponent(users)
+                .addComponent(jLabel4)
                 .addGap(50, 50, 50)
-                .addComponent(billing)
+                .addComponent(jLabel3)
                 .addContainerGap(86, Short.MAX_VALUE))
         );
 
@@ -147,103 +136,6 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        jPanel5.setBackground(new java.awt.Color(98, 138, 203));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Total sales");
-
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("0");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addGap(21, 21, 21))
-        );
-
-        jPanel6.setBackground(new java.awt.Color(98, 138, 203));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Total customers");
-
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("0");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(10, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jLabel10)
-                .addGap(19, 19, 19))
-        );
-
-        jPanel7.setBackground(new java.awt.Color(98, 138, 203));
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Out of stock");
-
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("0");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jLabel12)
-                .addGap(22, 22, 22))
-        );
-
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(98, 138, 203));
         jLabel9.setText("Expiring List");
@@ -269,30 +161,16 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(74, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(151, 151, 151)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(51, 51, 51)
-                        .addComponent(jLabel9))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(216, 216, 216)
+                .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(21, Short.MAX_VALUE))
@@ -378,14 +256,18 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminDashboardPharma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashboardPharma1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminDashboardPharma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashboardPharma1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminDashboardPharma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashboardPharma1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminDashboardPharma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDashboardPharma1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -394,51 +276,26 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminDashboardPharma().setVisible(true);
+                new AdminDashboardPharma1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel appointment;
-    private javax.swing.JLabel billing;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel pharmacy;
-    private javax.swing.JLabel users;
     // End of variables declaration//GEN-END:variables
-
-    public JLabel getAppointment() {
-        return appointment;
-    }
-
-    public JLabel getBilling() {
-        return billing;
-    }
-
-    public JLabel getPharmacy() {
-        return pharmacy;
-    }
-
-    public JLabel getUsers() {
-        return users;
-    }
 }
