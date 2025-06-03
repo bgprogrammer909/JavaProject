@@ -5,6 +5,7 @@
 package clinicandpharmacymanagement.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -55,6 +56,7 @@ public class HomePage extends javax.swing.JFrame {
         loginButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Log In");
+        loginButton.setBorder(null);
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
@@ -80,11 +82,12 @@ public class HomePage extends javax.swing.JFrame {
                         .addGap(24, 24, 24)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(loginButton))
+                        .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
-                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +169,7 @@ public class HomePage extends javax.swing.JFrame {
 public void loggingIn(ActionListener listener){
     loginButton.addActionListener(listener);
 }
-                       
+
 public void register(ActionListener listener){
     registerButton.addActionListener(listener);
 }
