@@ -17,9 +17,13 @@ public class ClinicAndPharmacyManagement {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+<<<<<<< HEAD
         HomePage home=new HomePage();
         HomepageController hcon=new HomepageController(home);
         hcon.open();
+=======
+        // TODO code application logic here
+>>>>>>> ff6607f90adef07f99721c781cb1215065f67440
     }
     
 }
