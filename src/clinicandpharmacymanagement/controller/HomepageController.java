@@ -8,12 +8,13 @@ import clinicandpharmacymanagement.view.HomePage;
 import clinicandpharmacymanagement.view.Registration;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import marksapp.java.view.LoginView;
+import clinicandpharmacymanagement.view.LoginView;
 
 
 /**
  *
  * @author ACER
+ * 
  */
 public class HomepageController {
     HomePage view;
