@@ -24,7 +24,7 @@ public class MysqlConnection implements DbConnection {
            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database,username,password);
            return conn;
        }catch (Exception e){
-           return null;
+             return null;
        }
     }
 
@@ -35,7 +35,7 @@ public class MysqlConnection implements DbConnection {
              conn.close();
          } 
      }catch(Exception e){
-         
+          e.printStackTrace();
      }
     } 
     }
