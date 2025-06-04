@@ -118,8 +118,6 @@ public class PatientDashboard extends javax.swing.JFrame {
                 .addGap(163, 163, 163))
         );
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication1/Imagepicker/blue_user_icon_64x64.png"))); // NOI18N
-
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel7.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.default.borderColor"));
         jLabel7.setText("Welcome Kamlesh");

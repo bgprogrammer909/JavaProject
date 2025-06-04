@@ -5,10 +5,12 @@
 package clinicandpharmacymanagement.controller;
 
 import clinicandpharmacymanagement.view.HomePage;
+import clinicandpharmacymanagement.view.LoginView;
 import clinicandpharmacymanagement.view.Registration;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import clinicandpharmacymanagement.view.LoginView;
+
+//import clinicandpharmacymanagement.view.LoginView;
 
 
 /**
