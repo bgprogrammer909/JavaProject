@@ -19,12 +19,12 @@ public class MysqlConnection implements DbConnection {
        String password="g0d_0f_bl@ckf13ld";
        String database="ClinicAndPharmacy";
        try{
-           Class.forName("com.mysql.jdbc.Driver");
+           Class.forName("com.mysql.cj.jdbc.Driver");
            Connection conn;
            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database,username,password);
            return conn;
        }catch (Exception e){
-             return null;
+           return null;
        }
     }
 
@@ -35,7 +35,7 @@ public class MysqlConnection implements DbConnection {
              conn.close();
          } 
      }catch(Exception e){
-          e.printStackTrace();
+         
      }
     } 
     }

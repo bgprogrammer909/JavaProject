@@ -3,12 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package clinicandpharmacymanagement.Database;
+
 import java.sql.*;
+
 /**
  *
  * @author ACER
  */
-public interface Dbconnection {
+public interface DbConnection {
     Connection openConnection();
     void closeConnection(Connection conn);
 }
