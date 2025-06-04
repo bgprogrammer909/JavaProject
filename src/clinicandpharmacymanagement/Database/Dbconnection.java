@@ -4,13 +4,10 @@
  */
 package clinicandpharmacymanagement.Database;
 
-import java.sql.*;
-
 /**
  *
  * @author ACER
  */
-public interface DbConnection {
-    Connection openConnection();
-    void closeConnection(Connection conn);
+public class Dbconnection {
+    
 }
