@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package marksapp.java.view;
+package clinicandpharmacymanagement.view;
 
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;

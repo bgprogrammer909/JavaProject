@@ -8,12 +8,13 @@ package clinicandpharmacymanagement.controller;
 
 
 import clinicandpharmacymanagement.Dao.UserDao;
+import clinicandpharmacymanagement.view.LoginView;
 import clinicandpharmacymanagement.view.Registration;
 import clinicandpharmacymanagement.view.model.UserData;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import marksapp.java.view.LoginView;
+
 
 
 /**

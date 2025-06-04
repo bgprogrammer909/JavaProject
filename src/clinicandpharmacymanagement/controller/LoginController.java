@@ -11,7 +11,7 @@ import clinicandpharmacymanagement.view.model.UserData;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import marksapp.java.view.LoginView;
+import clinicandpharmacymanagement.view.LoginView;
 
 /**
  *
