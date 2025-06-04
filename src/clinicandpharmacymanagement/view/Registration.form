@@ -124,7 +124,7 @@
                               <Component id="jScrollPane1" alignment="0" pref="194" max="32767" attributes="0"/>
                               <Component id="regPassword" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jcshow" min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jctermsandconditions" min="-2" pref="228" max="-2" attributes="0"/>
