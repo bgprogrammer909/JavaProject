@@ -15,7 +15,7 @@ import clinicandpharmacymanagement.view.model.UserData;
 public class AdminController {
     AdminDashboardPharma view;
     UserData user;
-    public AdminController(AdminDashboardPharma view,UserData user){
+    public AdminController(  AdminDashboardPharma view,UserData user){
         this.view=view;
         AdminDashboardPharma1 ad2=new AdminDashboardPharma1();
         new ButtonController(view.getUsers(),this.view,ad2);
