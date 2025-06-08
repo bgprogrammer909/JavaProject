@@ -49,7 +49,20 @@ public class LoginController {
                 UserData user=ud.login(loginData);
                 if (user==null){
                     JOptionPane.showMessageDialog(view, "logged failed");
-                }else{
+                }else if(user.getUtype().equals("patient")){
+                    JOptionPane.showMessageDialog(view, "logged in sucessful");
+                    PatientDashboard dashboardView=new PatientDashboard();
+                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
+                    dashboardControl.open();
+                    close();
+                }
+                else if(user.getUtype().equals("staff")){
+                    JOptionPane.showMessageDialog(view, "logged in sucessful");
+                    PatientDashboard dashboardView=new PatientDashboard();
+                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
+                    dashboardControl.open();
+                    close();
+                }else if(user.getUtype().equals("admin")){
                     JOptionPane.showMessageDialog(view, "logged in sucessful");
                     PatientDashboard dashboardView=new PatientDashboard();
                     PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
@@ -57,7 +70,7 @@ public class LoginController {
                     close();
                 }
                 
-            }
+            
         }
         
         
