@@ -48,7 +48,9 @@ public class UserDao {
                 String name=result.getString("fname");
                 String password=result.getString("fpassword");
                 String id=result.getString("id");
-                UserData user=new UserData(name,email,password,id);
+                String utype=result.getString("type");
+
+                UserData user=new UserData(id,name,email,password,utype);
                 return user;
             }else {
                 return null;

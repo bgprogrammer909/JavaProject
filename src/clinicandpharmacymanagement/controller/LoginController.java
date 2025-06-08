@@ -5,6 +5,7 @@
 package clinicandpharmacymanagement.controller;
 
 import clinicandpharmacymanagement.Dao.UserDao;
+import clinicandpharmacymanagement.view.AdminDashboardPharma;
 import clinicandpharmacymanagement.view.PatientDashboard;
 import clinicandpharmacymanagement.view.model.LoginRequest;
 import clinicandpharmacymanagement.view.model.UserData;
@@ -24,6 +25,8 @@ public class LoginController {
         this.view=view;
         LoginUser loginUser= new LoginUser();
         this.view.loginIt(loginUser);
+        ShowPasswordControl pcon=new ShowPasswordControl();
+        this.view.showPassword(pcon);
     }
     
     public void open(){
@@ -33,7 +36,18 @@ public class LoginController {
     public void close(){
         view.dispose();
     }
-    
+    class ShowPasswordControl implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // TODO add your handling code here:
+        if (view.getCheckBox().isSelected()){
+            view.getPasswordField().setEchoChar((char)0);   
+        }
+        else{
+             view.getPasswordField().setEchoChar('*');
+        }
+        }}
     class LoginUser implements ActionListener{
 
         @Override
@@ -64,15 +78,15 @@ public class LoginController {
                     close();
                 }else if(user.getUtype().equals("admin")){
                     JOptionPane.showMessageDialog(view, "logged in sucessful");
-                    PatientDashboard dashboardView=new PatientDashboard();
-                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
+                    AdminDashboardPharma dashboardView=new AdminDashboardPharma();
+                    AdminController dashboardControl=new AdminController(dashboardView,user);
                     dashboardControl.open();
                     close();
                 }
                 
             
-        }
+        }}}}
         
         
-    }
-}
+    
+

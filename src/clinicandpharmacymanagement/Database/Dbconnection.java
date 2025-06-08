@@ -8,7 +8,7 @@ import java.sql.*;
  *
  * @author ACER
  */
-public interface Dbconnection {
+public interface DbConnection {
     Connection openConnection();
     void closeConnection(Connection conn);
 }
