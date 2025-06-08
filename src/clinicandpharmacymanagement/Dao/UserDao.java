@@ -9,6 +9,8 @@ import clinicandpharmacymanagement.view.model.LoginRequest;
 import clinicandpharmacymanagement.view.model.ResetPasswordRequest;
 import clinicandpharmacymanagement.view.model.UserData;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -92,4 +94,31 @@ public class UserDao {
             mysql.closeConnection(conn);
         }
     }
+     public List<UserData> getAllUsers() {
+        List<UserData> users = new ArrayList<>();
+        String query = "SELECT * FROM users";
+        Connection conn = mysql.openConnection();
+
+        try {
+            PreparedStatement stmnt = conn.prepareStatement(query);
+            ResultSet rs = stmnt.executeQuery();
+
+            while (rs.next()) {
+                UserData user = new UserData(
+                    rs.getString("id"),
+                    rs.getString("fname"),
+                    rs.getString("email"),
+                    rs.getString("fpassword"),
+                    rs.getString("type")
+                );
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            
+        } finally {
+            mysql.closeConnection(conn);
+        }
+        return users;
+    }
 }
+

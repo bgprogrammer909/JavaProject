@@ -12,12 +12,13 @@ import javax.swing.table.DefaultTableModel;
 public class AdminController {
     AdminDashboardPharma view;
     UserData user;
-    UserDao userDao = new UserDao();  // Added instance
+    UserDao userDao = new UserDao();  
 
     public AdminController(AdminDashboardPharma view, UserData user) {
         this.view = view;
         this.user = user;
-        // Removed the unnecessary AdminDashboardPharma1 ad2 instantiation
+        this.view.refresh(new LoadDataListener());
+        
     }
 
     public void open() {
