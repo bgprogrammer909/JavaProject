@@ -11,7 +11,7 @@ import java.sql.*;
  *
  * @author ACER
  */
-public class MysqlConnection implements Dbconnection {
+public class MysqlConnection implements DbConnection {
 
     @Override
     public Connection openConnection() {
@@ -19,7 +19,7 @@ public class MysqlConnection implements Dbconnection {
        String password="g0d_0f_bl@ckf13ld";
        String database="ClinicAndPharmacy";
        try{
-           Class.forName("com.mysql.jdbc.Driver");
+           Class.forName("com.mysql.cj.jdbc.Driver");
            Connection conn;
            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database,username,password);
            return conn;
