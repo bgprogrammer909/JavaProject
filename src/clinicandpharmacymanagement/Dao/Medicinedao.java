@@ -20,7 +20,7 @@ public class Medicinedao {
             
             PreparedStatement stmnt=conn.prepareStatement(query);
             stmnt.setString(1, medicinemodel.getmedicinename());
-            stmnt.setUnit(2, medicinemodel.getunit());
+            stmnt.setInt(2, medicinemodel.getunit());
             stmnt.setDate(3, (Date) medicinemodel.getexpirydate());
             stmnt.setString(4, medicinemodel.getId());
             stmnt.setString(5, medicinemodel.getprice());
