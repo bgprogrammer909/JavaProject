@@ -11,7 +11,7 @@ import java.sql.*;
  *
  * @author ACER
  */
-public class MysqlConnection implements DbConnection {
+public class MysqlConnection implements Dbconnection {
 
     @Override
     public Connection openConnection() {
