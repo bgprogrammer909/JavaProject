@@ -122,9 +122,9 @@
                               <Component id="jScrollPane2" pref="194" max="32767" attributes="0"/>
                               <Component id="jLabel1" alignment="1" min="-2" pref="166" max="-2" attributes="0"/>
                               <Component id="jScrollPane1" alignment="0" pref="194" max="32767" attributes="0"/>
-                              <Component id="regPassword" max="32767" attributes="0"/>
+                              <Component id="regPassword" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                           <Component id="jcshow" min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jctermsandconditions" min="-2" pref="228" max="-2" attributes="0"/>
@@ -158,11 +158,11 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jcshow" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                      <Component id="regPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
                   <Component id="jctermsandconditions" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="registerBtn" min="-2" max="-2" attributes="0"/>
@@ -239,6 +239,8 @@
             <Property name="text" type="java.lang.String" value="Password"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JPasswordField" name="regPassword">
+        </Component>
         <Component class="javax.swing.JButton" name="registerBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -276,11 +278,6 @@
               <Color blue="0" green="66" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="I agree to all terms and conditions"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="regPassword">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
         </Component>
       </SubComponents>
