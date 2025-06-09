@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>src/clinicandpharmacymanagement/controller/AdminController.java</url>
-            <bookmark id="1">
-                <name/>
-                <line>15</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< Updated upstream
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/Registration.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/LoginView.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/MainDashboard.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/LoginRequest.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/RegisterController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/LoginController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/AdminController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/UserData.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/AdminDashboardPharma.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/HomepageController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/PatientDashboardController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Database/MysqlConnection.java</file>
-=======
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/Registration.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/MainDashboard.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/AdminDashboardPharma1.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/HomePage.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/LoginView.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/PatientDashboard.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/Staffdashboard.java</file>
->>>>>>> Stashed changes
-        </group>
+        <group/>
     </open-files>
 </project-private>
