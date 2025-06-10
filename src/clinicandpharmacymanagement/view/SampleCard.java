@@ -26,16 +26,16 @@ public class SampleCard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        SideMenu = new javax.swing.JPanel();
+        MedicineButton = new javax.swing.JButton();
+        HomeButton = new javax.swing.JButton();
+        DoctorButton = new javax.swing.JButton();
+        RecordButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        Home = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        MyRecords = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -48,12 +48,12 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        Medicine = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jPanel5 = new javax.swing.JPanel();
+        Doctor = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -61,54 +61,69 @@ public class SampleCard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(57, 88, 134));
+        SideMenu.setBackground(new java.awt.Color(57, 88, 134));
 
-        jButton1.setText("Medicine");
-
-        jButton2.setText("Home");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        MedicineButton.setText("Medicine");
+        MedicineButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                MedicineButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("View Doctor");
+        HomeButton.setText("Home");
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeButtonActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("My records");
+        DoctorButton.setText("View Doctor");
+        DoctorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoctorButtonActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        RecordButton.setText("My records");
+        RecordButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RecordButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout SideMenuLayout = new javax.swing.GroupLayout(SideMenu);
+        SideMenu.setLayout(SideMenuLayout);
+        SideMenuLayout.setHorizontalGroup(
+            SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SideMenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RecordButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DoctorButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MedicineButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        SideMenuLayout.setVerticalGroup(
+            SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SideMenuLayout.createSequentialGroup()
                 .addGap(126, 126, 126)
-                .addComponent(jButton2)
+                .addComponent(HomeButton)
                 .addGap(40, 40, 40)
-                .addComponent(jButton5)
+                .addComponent(RecordButton)
                 .addGap(40, 40, 40)
-                .addComponent(jButton1)
+                .addComponent(MedicineButton)
                 .addGap(40, 40, 40)
-                .addComponent(jButton3)
+                .addComponent(DoctorButton)
                 .addContainerGap(157, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(SideMenu, java.awt.BorderLayout.LINE_START);
 
         jPanel1.setBackground(new java.awt.Color(213, 222, 238));
         jPanel1.setLayout(new java.awt.CardLayout());
 
-        jPanel3.setBackground(new java.awt.Color(213, 222, 238));
+        Home.setBackground(new java.awt.Color(213, 222, 238));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -131,26 +146,26 @@ public class SampleCard extends javax.swing.JFrame {
                 .addContainerGap(352, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
+        Home.setLayout(HomeLayout);
+        HomeLayout.setHorizontalGroup(
+            HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(31, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        HomeLayout.setVerticalGroup(
+            HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, "card2");
+        jPanel1.add(Home, "card2");
 
-        jPanel4.setBackground(new java.awt.Color(213, 222, 238));
+        MyRecords.setBackground(new java.awt.Color(213, 222, 238));
 
         jLabel9.setText("Hello Shrijan Maharjan");
 
@@ -239,26 +254,26 @@ public class SampleCard extends javax.swing.JFrame {
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout MyRecordsLayout = new javax.swing.GroupLayout(MyRecords);
+        MyRecords.setLayout(MyRecordsLayout);
+        MyRecordsLayout.setHorizontalGroup(
+            MyRecordsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MyRecordsLayout.createSequentialGroup()
                 .addContainerGap(32, Short.MAX_VALUE)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        MyRecordsLayout.setVerticalGroup(
+            MyRecordsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MyRecordsLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel4, "card2");
+        jPanel1.add(MyRecords, "card2");
 
-        jPanel6.setBackground(new java.awt.Color(213, 222, 238));
+        Medicine.setBackground(new java.awt.Color(213, 222, 238));
 
         jLabel7.setText("Here are the prescriptions for your medication:");
 
@@ -297,26 +312,26 @@ public class SampleCard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout MedicineLayout = new javax.swing.GroupLayout(Medicine);
+        Medicine.setLayout(MedicineLayout);
+        MedicineLayout.setHorizontalGroup(
+            MedicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicineLayout.createSequentialGroup()
                 .addContainerGap(32, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+        MedicineLayout.setVerticalGroup(
+            MedicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicineLayout.createSequentialGroup()
                 .addContainerGap(40, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
 
-        jPanel1.add(jPanel6, "card2");
+        jPanel1.add(Medicine, "card2");
 
-        jPanel5.setBackground(new java.awt.Color(213, 222, 238));
+        Doctor.setBackground(new java.awt.Color(213, 222, 238));
 
         jLabel8.setText("Here are details about the doctors:");
 
@@ -352,41 +367,65 @@ public class SampleCard extends javax.swing.JFrame {
                 .addGap(56, 56, 56))
         );
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout DoctorLayout = new javax.swing.GroupLayout(Doctor);
+        Doctor.setLayout(DoctorLayout);
+        DoctorLayout.setHorizontalGroup(
+            DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorLayout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        DoctorLayout.setVerticalGroup(
+            DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DoctorLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel5, "card2");
+        jPanel1.add(Doctor, "card2");
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
         jPanel1.removeAll();
-        jPanel1.add(jPanel3);
+        jPanel1.add(Home);
         jPanel1.repaint();
         jPanel1.revalidate();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void RecordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecordButtonActionPerformed
+        // TODO add your handling code here:
+        jPanel1.removeAll();
+        jPanel1.add(MyRecords);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_RecordButtonActionPerformed
+
+    private void MedicineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MedicineButtonActionPerformed
+        // TODO add your handling code here:
+        jPanel1.removeAll();
+        jPanel1.add(Medicine);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_MedicineButtonActionPerformed
+
+    private void DoctorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorButtonActionPerformed
+        // TODO add your handling code here:
+        jPanel1.removeAll();
+        jPanel1.add(Doctor);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_DoctorButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -424,11 +463,16 @@ public class SampleCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel Doctor;
+    private javax.swing.JButton DoctorButton;
+    private javax.swing.JPanel Home;
+    private javax.swing.JButton HomeButton;
+    private javax.swing.JPanel Medicine;
+    private javax.swing.JButton MedicineButton;
+    private javax.swing.JPanel MyRecords;
+    private javax.swing.JButton RecordButton;
+    private javax.swing.JPanel SideMenu;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -444,11 +488,6 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
