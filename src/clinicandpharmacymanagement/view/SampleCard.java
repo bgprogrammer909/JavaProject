@@ -63,6 +63,9 @@ public class SampleCard extends javax.swing.JFrame {
 
         SideMenu.setBackground(new java.awt.Color(57, 88, 134));
 
+        MedicineButton.setBackground(new java.awt.Color(138, 174, 224));
+        MedicineButton.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        MedicineButton.setForeground(new java.awt.Color(255, 255, 255));
         MedicineButton.setText("Medicine");
         MedicineButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +73,9 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        HomeButton.setBackground(new java.awt.Color(138, 174, 224));
+        HomeButton.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        HomeButton.setForeground(new java.awt.Color(255, 255, 255));
         HomeButton.setText("Home");
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +83,9 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        DoctorButton.setBackground(new java.awt.Color(138, 174, 224));
+        DoctorButton.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        DoctorButton.setForeground(new java.awt.Color(255, 255, 255));
         DoctorButton.setText("View Doctor");
         DoctorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +93,9 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        RecordButton.setBackground(new java.awt.Color(138, 174, 224));
+        RecordButton.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        RecordButton.setForeground(new java.awt.Color(255, 255, 255));
         RecordButton.setText("My records");
         RecordButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +127,7 @@ public class SampleCard extends javax.swing.JFrame {
                 .addComponent(MedicineButton)
                 .addGap(40, 40, 40)
                 .addComponent(DoctorButton)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         getContentPane().add(SideMenu, java.awt.BorderLayout.LINE_START);
@@ -127,6 +139,8 @@ public class SampleCard extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(98, 138, 203));
         jLabel1.setText("Welcome Shrijan !!!");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -134,16 +148,16 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(141, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
+                .addContainerGap(97, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(35, 35, 35)
                 .addComponent(jLabel1)
-                .addContainerGap(352, Short.MAX_VALUE))
+                .addContainerGap(360, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
@@ -153,32 +167,49 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jPanel1.add(Home, "card2");
 
         MyRecords.setBackground(new java.awt.Color(213, 222, 238));
 
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(98, 138, 203));
         jLabel9.setText("Hello Shrijan Maharjan");
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(98, 138, 203));
         jLabel10.setText("Here is your profile!");
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(98, 138, 203));
         jLabel11.setText("Name:");
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(98, 138, 203));
         jLabel12.setText("Age:");
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(98, 138, 203));
         jLabel13.setText("Gender:");
 
+        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(98, 138, 203));
         jLabel14.setText("Blood Group:");
 
+        jButton4.setBackground(new java.awt.Color(138, 174, 224));
+        jButton4.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Edit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,12 +217,20 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(98, 138, 203));
         jLabel15.setText("Shrijan Maharjan");
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(98, 138, 203));
         jLabel16.setText("O+");
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(98, 138, 203));
         jLabel17.setText("19");
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(98, 138, 203));
         jLabel18.setText("Male");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -204,7 +243,7 @@ public class SampleCard extends javax.swing.JFrame {
                         .addGap(118, 118, 118)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -224,16 +263,16 @@ public class SampleCard extends javax.swing.JFrame {
                                 .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
                             .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10)
-                .addGap(74, 74, 74)
+                .addGap(94, 94, 94)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel15))
@@ -259,7 +298,7 @@ public class SampleCard extends javax.swing.JFrame {
         MyRecordsLayout.setHorizontalGroup(
             MyRecordsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MyRecordsLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -268,13 +307,15 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(MyRecordsLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanel1.add(MyRecords, "card2");
 
         Medicine.setBackground(new java.awt.Color(213, 222, 238));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(98, 138, 203));
         jLabel7.setText("Here are the prescriptions for your medication:");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -317,7 +358,7 @@ public class SampleCard extends javax.swing.JFrame {
         MedicineLayout.setHorizontalGroup(
             MedicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicineLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -333,6 +374,8 @@ public class SampleCard extends javax.swing.JFrame {
 
         Doctor.setBackground(new java.awt.Color(213, 222, 238));
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(98, 138, 203));
         jLabel8.setText("Here are details about the doctors:");
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -372,7 +415,7 @@ public class SampleCard extends javax.swing.JFrame {
         DoctorLayout.setHorizontalGroup(
             DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
