@@ -50,6 +50,22 @@ public class MedicineModel {
         this.id = id;
         this.price = price;
     }
+
+    public int getUnit() {
+        return unit;
+    }
+
+    public void setUnit(int unit) {
+        this.unit = unit;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
      
      
 }
