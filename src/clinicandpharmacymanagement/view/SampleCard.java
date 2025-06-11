@@ -314,6 +314,8 @@ public class SampleCard extends javax.swing.JFrame {
 
         Medicine.setBackground(new java.awt.Color(213, 222, 238));
 
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(98, 138, 203));
         jLabel7.setText("Here are the prescriptions for your medication:");
@@ -374,6 +376,9 @@ public class SampleCard extends javax.swing.JFrame {
 
         Doctor.setBackground(new java.awt.Color(213, 222, 238));
 
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(98, 138, 203));
         jLabel8.setText("Here are details about the doctors:");
@@ -443,7 +448,8 @@ public class SampleCard extends javax.swing.JFrame {
     }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        InfoDetail s = new InfoDetail();
+        s.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void RecordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecordButtonActionPerformed
