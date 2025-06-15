@@ -29,6 +29,9 @@ public class Billingdao {
             
             PreparedStatement stmnt=conn.prepareStatement(query);
             stmnt.setString(1,model.getId());
+            stmnt.setString(2,model.getDate());
+            stmnt.setString(3,model.getCustomername());
+            
            
             
             int result=stmnt.executeUpdate();
