@@ -1,5 +1,6 @@
 package clinicandpharmacymanagement.view;
 import clinicandpharmacymanagement.view.MainDashboard;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -103,6 +104,11 @@ public class Paymentdash extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(138, 174, 224));
         jButton2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jButton2.setText("Generate bill");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 401, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(57, 88, 134));
@@ -183,6 +189,34 @@ public class Paymentdash extends javax.swing.JFrame {
       this.dispose(); // close current Paymentdash window
     new MainDashboard().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+  javax.swing.table.TableModel model = jTable1.getModel();
+    
+    // Start building the bill
+    StringBuilder bill = new StringBuilder();
+    bill.append("=========== HOSPITAL BILL ===========\n");
+    bill.append("Patient ID: ").append(jTextField1.getText()).append("\n\n");
+    bill.append(String.format("%-20s %-10s %-10s\n", "Service", "Qty", "Cost"));
+    bill.append("-------------------------------------------\n");
+    
+    // Loop through table rows
+    for (int row = 0; row < model.getRowCount(); row++) {
+        Object service = model.getValueAt(row, 0);
+        Object quantity = model.getValueAt(row, 1);
+        Object cost = model.getValueAt(row, 2);
+
+        if (service != null && quantity != null && cost != null) {
+            bill.append(String.format("%-20s %-10s %-10s\n", service, quantity, cost));
+        }
+    }
+    
+    bill.append("\nTotal Amount: NPR ").append(jTextField2.getText());
+    bill.append("\n=====================================");
+
+    // Show the bill in a message dialog
+    JOptionPane.showMessageDialog(this, bill.toString(), "Generated Bill", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
    public static void main(String[] args) {
