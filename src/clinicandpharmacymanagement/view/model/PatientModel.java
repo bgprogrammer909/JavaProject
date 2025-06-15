@@ -13,17 +13,6 @@ import java.util.Date;
  * @author AngkitKharel
  */
 public class PatientModel {
-    private String id;
-    private String name;
-    private String time;
-    private String phone;
-
-    public PatientModel(String id, String name, String time, String phone) {
-        this.id = id;
-        this.name = name;
-        this.time = time;
-        this.phone = phone;
-    }
 
     /**
      * @return the id
@@ -54,17 +43,17 @@ public class PatientModel {
     }
 
     /**
-     * @return the time
+     * @return the address
      */
-    public String getTime() {
-        return time;
+    public String getAddress() {
+        return address;
     }
 
     /**
-     * @param time the time to set
+     * @param address the address to set
      */
-    public void setTime(String time) {
-        this.time = time;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     /**
@@ -81,9 +70,39 @@ public class PatientModel {
         this.phone = phone;
     }
 
+    /**
+     * @return the condition
+     */
+    public String getCondition() {
+        return condition;
+    }
+
+    /**
+     * @param condition the condition to set
+     */
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    /**
+     * @return the emergency
+     */
+    public String getEmergency() {
+        return emergency;
+    }
+
+    /**
+     * @param emergency the emergency to set
+     */
+    public void setEmergency(String emergency) {
+        this.emergency = emergency;
+    }
+    private String id;
+    private String name;
+    private String address;
+    private String phone;
+    private String condition;
+    private String emergency;
+
     
-   
-   
-}
-         
-     
+}   
