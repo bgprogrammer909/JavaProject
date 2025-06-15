@@ -5,6 +5,7 @@
 package clinicandpharmacymanagement.Dao;
 
 import clinicandpharmacymanagement.Database.MysqlConnection;
+import clinicandpharmacymanagement.view.model.BillingModel;
 
 
 
@@ -15,16 +16,19 @@ import java.sql.*;
  */
 public class Billingdao {
     MysqlConnection mysql=new MysqlConnection();
+
+    /**
+     *
+     * @param model
+     * @return
+     */
     public boolean addbilling(BillingModel model){
-    String query ="insert into Doctor(id,name,phone,time) values(?,?,?,?)";
+    String query ="insert into Doctor(id,date,customername,phone,amount) values(?,?,?,?,?,?)";
         Connection conn=mysql.openConnection();
         try{
             
             PreparedStatement stmnt=conn.prepareStatement(query);
             stmnt.setString(1,model.getId());
-            stmnt.setString(2, model.getName());
-            stmnt.setString(3,model.getPhone());
-            stmnt.setString(4,model.getTime());
            
             
             int result=stmnt.executeUpdate();
