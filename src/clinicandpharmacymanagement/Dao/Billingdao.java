@@ -31,7 +31,8 @@ public class Billingdao {
             stmnt.setString(1,model.getId());
             stmnt.setString(2,model.getDate());
             stmnt.setString(3,model.getCustomername());
-            
+            stmnt.setString(4,model.getPhone());
+            stmnt.setString(5,model.getAmount());
            
             
             int result=stmnt.executeUpdate();
