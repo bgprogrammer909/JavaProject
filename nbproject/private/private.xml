@@ -21,6 +21,8 @@
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/controller/LoginController.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/controller/RegisterController.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Doctordao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Patientdao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/PatientModel.java</file>
         </group>
     </open-files>
 </project-private>

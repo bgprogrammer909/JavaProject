@@ -14,7 +14,7 @@ import java.sql.*;
 public class Patientdao {
  MysqlConnection mysql=new MysqlConnection();
     public boolean patient(PatientModel model){
-        String query ="insert into PatientModel(id,name,address,phone,condition,emergencynumber) values(?,?,?,?,?,?)";
+        String query ="insert into model(id,name,address,phone,condition,emergency) values(?,?,?,?,?,?)";
         Connection conn=mysql.openConnection();
     }
     
