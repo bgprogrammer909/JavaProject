@@ -19,11 +19,11 @@ public class Medicinedao {
         try{
             
             PreparedStatement stmnt=conn.prepareStatement(query);
-            stmnt.setString(1, medicinemodel.getmedicinename());
-            stmnt.setInt(2, medicinemodel.getunit());
-            stmnt.setDate(3, (Date) medicinemodel.getexpirydate());
+            stmnt.setString(1, medicinemodel.getMedicinename());
+            stmnt.setInt(2, medicinemodel.getUnit());
+            stmnt.setDate(3, (Date) medicinemodel.getExpirydate());
             stmnt.setString(4, medicinemodel.getId());
-            stmnt.setString(5, medicinemodel.getprice());
+            stmnt.setString(5, medicinemodel.getPrice());
             int result=stmnt.executeUpdate();
             return result>0;
         } catch(SQLException e){
@@ -33,5 +33,6 @@ public class Medicinedao {
         }
  
     }
+}
     
 
