@@ -5,25 +5,28 @@
 package clinicandpharmacymanagement.Dao;
 
 import clinicandpharmacymanagement.Database.MysqlConnection;
-import clinicandpharmacymanagement.view.model.MedicineModel;
+import clinicandpharmacymanagement.view.model.DoctorModel;
+
+
 import java.sql.*;
 /**
  *
  * @author AngkitKharel
  */
 public class Doctordao {
- MysqlConnection mysql=new MysqlConnection();
-    public boolean medicine(MedicineModel medicinemodel){
-        String query ="insert into medicinemodel(medincename,id,unit,price,expirydate) values(?,?,?,?,?)";
+    MysqlConnection mysql=new MysqlConnection();
+    public boolean addDoctor(DoctorModel model){
+    String query ="insert into Doctor(id,name,phone,time) values(?,?,?,?)";
         Connection conn=mysql.openConnection();
         try{
             
             PreparedStatement stmnt=conn.prepareStatement(query);
-            stmnt.setString(1, medicinemodel.);
-            stmnt.setInt(2, medicinemodel.getunit());
-            stmnt.setDate(3, (Date) medicinemodel.getexpirydate());
-            stmnt.setString(4, medicinemodel.getId());
-            stmnt.setString(5, medicinemodel.getprice());
+            stmnt.setString(1,model.getId());
+            stmnt.setString(2, model.getName());
+            stmnt.setString(3,model.getPhone());
+            stmnt.setString(4,model.getTime());
+           
+            
             int result=stmnt.executeUpdate();
             return result>0;
         } catch(SQLException e){
@@ -32,6 +35,7 @@ public class Doctordao {
             mysql.closeConnection(conn);
         }
  
-    }
+}
+    
     
 

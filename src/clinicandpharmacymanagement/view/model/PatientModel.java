@@ -12,13 +12,13 @@ import java.util.Date;
  *
  * @author AngkitKharel
  */
-public class DoctorModel {
+public class PatientModel {
     private String id;
     private String name;
     private String time;
     private String phone;
 
-    public DoctorModel(String id, String name, String time, String phone) {
+    public PatientModel(String id, String name, String time, String phone) {
         this.id = id;
         this.name = name;
         this.time = time;
