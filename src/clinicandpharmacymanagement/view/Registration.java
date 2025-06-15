@@ -120,7 +120,11 @@ public class Registration extends javax.swing.JFrame {
         jctermsandconditions.setForeground(new java.awt.Color(0, 102, 0));
         jctermsandconditions.setText("I agree to all terms and conditions");
 
-        regPassword.setText("jPasswordField1");
+        regPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regPasswordActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -207,6 +211,10 @@ public class Registration extends javax.swing.JFrame {
             
         
     }//GEN-LAST:event_registerBtnActionPerformed
+
+    private void regPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regPasswordActionPerformed
 
     /**
      * @param args the command line arguments
