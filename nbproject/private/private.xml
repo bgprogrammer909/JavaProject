@@ -12,6 +12,10 @@
             <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/staffdashh.java</file>
             <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/model/PatientModel.java</file>
             <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/Dao/PatientDao.java</file>
+            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/PatientDashboardController.java</file>
+            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/HomepageController.java</file>
+            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/BillingsController.java</file>
+            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/Appointmentcontroller.java</file>
         </group>
     </open-files>
 </project-private>

@@ -68,7 +68,7 @@ public class StaffDash extends javax.swing.JFrame {
         Appointment = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        appointments = new javax.swing.JTable();
         Patients = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -76,7 +76,7 @@ public class StaffDash extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         Billings = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        medicines = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -468,7 +468,7 @@ public class StaffDash extends javax.swing.JFrame {
 
         jLabel12.setText("WELCOME TO APPOINTMENTS");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        appointments.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -479,7 +479,7 @@ public class StaffDash extends javax.swing.JFrame {
                 "ID", "Appointments", "Patients", "Doctor"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(appointments);
 
         javax.swing.GroupLayout AppointmentLayout = new javax.swing.GroupLayout(Appointment);
         Appointment.setLayout(AppointmentLayout);
@@ -556,7 +556,7 @@ public class StaffDash extends javax.swing.JFrame {
 
         parent.add(Patients, "card4");
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        medicines.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -567,7 +567,7 @@ public class StaffDash extends javax.swing.JFrame {
                 "ID", "Medicine name", "unit", "price", "total"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(medicines);
 
         jLabel19.setText("BILLINGS OF PATIENTS");
 
@@ -785,6 +785,7 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JPanel Home;
     private javax.swing.JPanel Patients;
     private javax.swing.JPanel Pharmacy;
+    private javax.swing.JTable appointments;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
@@ -823,14 +824,13 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTable medicines;
     private javax.swing.JPanel parent;
     // End of variables declaration//GEN-END:variables
 }
