@@ -18,6 +18,10 @@
             <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/InfoDetail.java</file>
             <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Dao/Medicinedao.java</file>
             <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Dao/PrescriptionsDao.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/model/PrescriptionModel.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Controller/PrescriptionController.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/BookAppointment.java</file>
         </group>
     </open-files>
 </project-private>
