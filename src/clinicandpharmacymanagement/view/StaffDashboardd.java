@@ -38,7 +38,6 @@ public class StaffDashboardd extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         parent = new javax.swing.JPanel();
-        Home = new javax.swing.JPanel();
         Pharmacy = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -55,6 +54,7 @@ public class StaffDashboardd extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
+        Home = new javax.swing.JPanel();
         Appointment = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -337,7 +337,7 @@ public class StaffDashboardd extends javax.swing.JFrame {
                                         .addComponent(jButton20)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jButton21)))))))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         PharmacyLayout.setVerticalGroup(
             PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -374,21 +374,17 @@ public class StaffDashboardd extends javax.swing.JFrame {
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
+        parent.add(Pharmacy, "card6");
+
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
         HomeLayout.setHorizontalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Pharmacy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+            .addGap(0, 658, Short.MAX_VALUE)
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Pharmacy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 535, Short.MAX_VALUE)
         );
 
         parent.add(Home, "card2");
@@ -541,7 +537,7 @@ public class StaffDashboardd extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(parent, javax.swing.GroupLayout.PREFERRED_SIZE, 535, Short.MAX_VALUE)
+                        .addComponent(parent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
 
