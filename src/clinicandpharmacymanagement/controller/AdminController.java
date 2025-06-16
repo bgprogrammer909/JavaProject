@@ -2,7 +2,7 @@ package clinicandpharmacymanagement.controller;
 
 import clinicandpharmacymanagement.Dao.UserDao;
 import clinicandpharmacymanagement.view.AdminDashboardPharma;
-import clinicandpharmacymanagement.view.LoginView;
+
 import clinicandpharmacymanagement.view.model.UserData;
 
 import java.awt.event.ActionEvent;
@@ -22,6 +22,7 @@ public class AdminController {
         this.view.refresh(new LoadDataListener());
         this.view.refresh2(new LoadStaffDataListener());
         this.view.registerStaff(new RegisterStaff());
+        this.view.deleteStaff(new DeleteStaff());
     }
 
     public void open() {
@@ -30,6 +31,37 @@ public class AdminController {
 
     public void close() {
         view.dispose();
+    }
+    class DeleteStaff implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int selectedRow = view.getStaffTable().getSelectedRow();
+        if (selectedRow != -1) {
+            int confirm = JOptionPane.showConfirmDialog(null,
+                "Are you sure you want to delete this record?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+
+            if (confirm == JOptionPane.YES_OPTION) {
+                // Assuming first column contains ID
+                String id = (String) view.getStaffTable().getValueAt(selectedRow, 0);
+                
+                // Call DAO to delete
+                boolean success = userDao.deleteUserById(id);
+                
+                if (success) {
+                    // Refresh table or remove row
+                    ((DefaultTableModel) view.getStaffTable().getModel()).removeRow(selectedRow);
+                    JOptionPane.showMessageDialog(null, "Record deleted successfully.");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Failed to delete record.");
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please select a row to delete.");
+        }
+    }
+        
+        
     }
     class RegisterStaff implements ActionListener{
 

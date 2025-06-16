@@ -61,8 +61,11 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         staffPas = new javax.swing.JTextField();
         refreshStaff = new javax.swing.JButton();
+        deleteStaffBtn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(213, 222, 238));
 
@@ -120,15 +123,14 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(userBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(staffBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(overviewBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(docBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(staffBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(78, 78, 78)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(84, Short.MAX_VALUE))
+            .addComponent(docBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(overviewBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,7 +238,7 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                     .addGroup(userPanelLayout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addGap(310, 310, 310))
         );
         userPanelLayout.setVerticalGroup(
             userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,7 +249,7 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                     .addComponent(refresh))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         parentAdmin.add(userPanel, "card2");
@@ -336,7 +338,7 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(164, 164, 164)
                         .addComponent(addStaffBtn)))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,6 +369,20 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
             }
         });
 
+        deleteStaffBtn.setBackground(new java.awt.Color(138, 174, 224));
+        deleteStaffBtn.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        deleteStaffBtn.setForeground(new java.awt.Color(255, 255, 255));
+        deleteStaffBtn.setText("Delete");
+        deleteStaffBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteStaffBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(98, 138, 203));
+        jLabel8.setText("Click record and button  remove staff ");
+
         javax.swing.GroupLayout staffPanelLayout = new javax.swing.GroupLayout(staffPanel);
         staffPanel.setLayout(staffPanelLayout);
         staffPanelLayout.setHorizontalGroup(
@@ -374,33 +390,48 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
             .addGroup(staffPanelLayout.createSequentialGroup()
                 .addGroup(staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(staffPanelLayout.createSequentialGroup()
-                        .addGap(180, 180, 180)
+                        .addGap(175, 175, 175)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
+                        .addGap(91, 91, 91)
                         .addComponent(refreshStaff)
                         .addGap(42, 42, 42))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staffPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(staffPanelLayout.createSequentialGroup()
+                        .addGroup(staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addGap(0, 34, Short.MAX_VALUE))
+                    .addGroup(staffPanelLayout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(deleteStaffBtn)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         staffPanelLayout.setVerticalGroup(
             staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staffPanelLayout.createSequentialGroup()
                 .addGroup(staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(staffPanelLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(refreshStaff))
+                        .addGroup(staffPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(staffPanelLayout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(refreshStaff))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staffPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel11)))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(staffPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(deleteStaffBtn)))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         parentAdmin.add(staffPanel, "card3");
@@ -415,7 +446,7 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(parentAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 4, Short.MAX_VALUE))
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -434,7 +465,9 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -476,25 +509,29 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
         parentAdmin.revalidate();
     }//GEN-LAST:event_staffBtnMouseClicked
 
-    private void staffEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffEmailActionPerformed
+    private void deleteStaffBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteStaffBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_staffEmailActionPerformed
+    }//GEN-LAST:event_deleteStaffBtnActionPerformed
 
-    private void staffNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffNameActionPerformed
+    private void refreshStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshStaffActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_staffNameActionPerformed
-
-    private void addStaffBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStaffBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addStaffBtnActionPerformed
+    }//GEN-LAST:event_refreshStaffActionPerformed
 
     private void staffPasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffPasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_staffPasActionPerformed
 
-    private void refreshStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshStaffActionPerformed
+    private void addStaffBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStaffBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_refreshStaffActionPerformed
+    }//GEN-LAST:event_addStaffBtnActionPerformed
+
+    private void staffNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_staffNameActionPerformed
+
+    private void staffEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_staffEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -536,6 +573,7 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addStaffBtn;
+    private javax.swing.JButton deleteStaffBtn;
     private javax.swing.JButton docBtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel11;
@@ -545,6 +583,7 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
@@ -586,6 +625,11 @@ public class AdminDashboardPharma extends javax.swing.JFrame {
     public void registerStaff(ActionListener listener){
     addStaffBtn.addActionListener(listener);
     }
+    
+    public void deleteStaff(ActionListener listener){
+    deleteStaffBtn.addActionListener(listener);
+    }
+
 
     public javax.swing.JTextField getNameTextField() {
         return staffName;
