@@ -15,22 +15,21 @@ import java.sql.*;
 public class Billingsdao {
     MysqlConnection mysql = new MysqlConnection();
 
-    public boolean insertMedicine(BillingsModel BillingsModel) {
+     public boolean insertBilling(BillingsModel billingsModel) {
         String query = "INSERT INTO medicinemodel (id, medincename, unit, price, total) VALUES (?, ?, ?, ?, ?)";
-        java.sql.Connection conn=mysql.openConnection();
+        java.sql.Connection conn = mysql.openConnection();
 
         try {
             PreparedStatement stmnt = conn.prepareStatement(query);
-            stmnt.setString(1, BillingsModel.getId());
-            stmnt.setString(2, BillingsModel.getMedicinename());
-            stmnt.setInt(3, BillingsModel.getUnit());
-            stmnt.setDouble(4, Double.parseDouble(BillingsModel.getPrice()));
-            stmnt.setDouble(5, BillingsModel.getUnit() * Double.parseDouble(BillingsModel.getPrice()));
+            stmnt.setString(1, billingsModel.getId());
+            stmnt.setString(2, billingsModel.getMedicinename());
+            stmnt.setInt(3, billingsModel.getUnit());
+            stmnt.setDouble(4, Double.parseDouble(billingsModel.getPrice()));
+            stmnt.setDouble(5, billingsModel.getUnit() * Double.parseDouble(billingsModel.getPrice()));
 
             int result = stmnt.executeUpdate();
             return result > 0;
         } catch (SQLException | NumberFormatException e) {
-            e.printStackTrace();
             return false;
         } finally {
             mysql.closeConnection(conn);
