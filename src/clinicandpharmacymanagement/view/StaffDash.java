@@ -4,6 +4,7 @@
  */
 package project2;
 
+import java.time.LocalDate;
 import javax.swing.JOptionPane;
 
 /**
@@ -51,7 +52,7 @@ public class StaffDash extends javax.swing.JFrame {
         amountfield = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        expirefield = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         add = new javax.swing.JButton();
         remove = new javax.swing.JButton();
@@ -274,9 +275,9 @@ public class StaffDash extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(98, 138, 203));
         jLabel13.setText("Price");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        expirefield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                expirefieldActionPerformed(evt);
             }
         });
 
@@ -298,6 +299,11 @@ public class StaffDash extends javax.swing.JFrame {
         remove.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         remove.setForeground(new java.awt.Color(255, 255, 255));
         remove.setText("REMOVE");
+        remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PharmacyLayout = new javax.swing.GroupLayout(Pharmacy);
         Pharmacy.setLayout(PharmacyLayout);
@@ -332,7 +338,7 @@ public class StaffDash extends javax.swing.JFrame {
                                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PharmacyLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(expirefield, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PharmacyLayout.createSequentialGroup()
                                         .addGap(27, 27, 27)
                                         .addComponent(remove))))
@@ -368,7 +374,7 @@ public class StaffDash extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(expirefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(add)
@@ -689,9 +695,9 @@ public class StaffDash extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_amountfieldActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void expirefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expirefieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_expirefieldActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
@@ -739,6 +745,26 @@ public class StaffDash extends javax.swing.JFrame {
         // TODO add your handling code here:
            
     }//GEN-LAST:event_jButton6MouseClicked
+
+    private void removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeActionPerformed
+        // TODO add your handling code here:
+        try {
+        String expiry = expirefield.getText(); 
+        LocalDate expiryDate = LocalDate.parse(expiry);
+        LocalDate today = LocalDate.now();
+        LocalDate nextMonthStart = today.plusMonths(1).withDayOfMonth(1);
+        LocalDate nextMonthEnd = nextMonthStart.withDayOfMonth(nextMonthStart.lengthOfMonth());
+
+        if (!expiryDate.isBefore(nextMonthStart) && !expiryDate.isAfter(nextMonthEnd)) {
+            // Delete from database using DAO
+            System.out.println("Medicine removed.");
+        } else {
+            JOptionPane.showMessageDialog(this, "Only medicines expiring next month can be removed.");
+        }
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "Enter date in yyyy-MM-dd format.");
+    }
+    }//GEN-LAST:event_removeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -791,6 +817,7 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JButton add;
     private javax.swing.JTextField amountfield;
     private javax.swing.JTable appointments;
+    private javax.swing.JTextField expirefield;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton22;
@@ -830,7 +857,6 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTable medicines;
     private javax.swing.JPanel parent;
     private javax.swing.JButton remove;
