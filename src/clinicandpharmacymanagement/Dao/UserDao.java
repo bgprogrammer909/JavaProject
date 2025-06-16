@@ -39,6 +39,20 @@ public class UserDao {
             mysql.closeConnection(conn);
         }
 }
+        public boolean deleteUserById(String id){
+        String query ="DELETE FROM users WHERE id = ?";
+        Connection conn=mysql.openConnection();
+        try{
+            PreparedStatement stmnt=conn.prepareStatement(query);
+            stmnt.setString(1, id);
+            int result=stmnt.executeUpdate();
+            return result>0;
+        } catch(SQLException e){
+            return false;
+        }finally {
+            mysql.closeConnection(conn);
+        }
+}
     public boolean registerStaff(UserData user){
         String query ="insert into users(fname,email,fpassword,type) values(?,?,?,?)";
         Connection conn=mysql.openConnection();
@@ -56,8 +70,6 @@ public class UserDao {
         }finally {
             mysql.closeConnection(conn);
         }
-        
-    
 }
 
     public UserData login(LoginRequest loginReq){
