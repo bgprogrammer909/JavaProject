@@ -4,6 +4,8 @@
  */
 package clinicandpharmacymanagement.view;
 
+import javax.swing.JTable;
+
 /**
  *
  * @author lenovo
@@ -545,4 +547,8 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
 }
