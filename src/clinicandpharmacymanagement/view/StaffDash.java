@@ -4,8 +4,18 @@
  */
 package clinicandpharmacymanagement.view;
 
+import java.awt.event.ActionListener;
 import java.time.LocalDate;
+import javax.accessibility.AccessibleContext;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRootPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -14,7 +24,7 @@ import javax.swing.JOptionPane;
 public class StaffDash extends javax.swing.JFrame {
 
     /**
-     * Creates new form staffdash
+     * Creates new form staffdashh
      */
     public StaffDash() {
         initComponents();
@@ -44,15 +54,15 @@ public class StaffDash extends javax.swing.JFrame {
         Pharmacy = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        name = new javax.swing.JLabel();
+        name1 = new javax.swing.JTextField();
+        id = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        amountfield = new javax.swing.JTextField();
+        amount = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        expirefield = new javax.swing.JTextField();
+        price = new javax.swing.JTextField();
+        expire = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         add = new javax.swing.JButton();
         remove = new javax.swing.JButton();
@@ -241,19 +251,19 @@ public class StaffDash extends javax.swing.JFrame {
 
         jLabel2.setText("What medicine to add and remove");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel4.setText("Medicine Name");
+        name.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        name.setForeground(new java.awt.Color(98, 138, 203));
+        name.setText("Medicine Name");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        name1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                name1ActionPerformed(evt);
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                idActionPerformed(evt);
             }
         });
 
@@ -265,9 +275,9 @@ public class StaffDash extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(98, 138, 203));
         jLabel5.setText("Medicine ID");
 
-        amountfield.addActionListener(new java.awt.event.ActionListener() {
+        amount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                amountfieldActionPerformed(evt);
+                amountActionPerformed(evt);
             }
         });
 
@@ -275,9 +285,9 @@ public class StaffDash extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(98, 138, 203));
         jLabel13.setText("Price");
 
-        expirefield.addActionListener(new java.awt.event.ActionListener() {
+        expire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                expirefieldActionPerformed(evt);
+                expireActionPerformed(evt);
             }
         });
 
@@ -313,24 +323,24 @@ public class StaffDash extends javax.swing.JFrame {
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PharmacyLayout.createSequentialGroup()
                         .addGap(114, 114, 114)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PharmacyLayout.createSequentialGroup()
                         .addGap(105, 105, 105)
                         .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PharmacyLayout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(amountfield, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(amount, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PharmacyLayout.createSequentialGroup()
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PharmacyLayout.createSequentialGroup()
                                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PharmacyLayout.createSequentialGroup()
                                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(add)
@@ -338,7 +348,7 @@ public class StaffDash extends javax.swing.JFrame {
                                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PharmacyLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(expirefield, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(expire, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PharmacyLayout.createSequentialGroup()
                                         .addGap(27, 27, 27)
                                         .addComponent(remove))))
@@ -357,24 +367,24 @@ public class StaffDash extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(61, 61, 61)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(name)
+                    .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(amountfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(amount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(expirefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(expire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PharmacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(add)
@@ -683,21 +693,21 @@ public class StaffDash extends javax.swing.JFrame {
         parent.revalidate();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_name1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_name1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_idActionPerformed
 
-    private void amountfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amountfieldActionPerformed
+    private void amountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_amountfieldActionPerformed
+    }//GEN-LAST:event_amountActionPerformed
 
-    private void expirefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expirefieldActionPerformed
+    private void expireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expireActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_expirefieldActionPerformed
+    }//GEN-LAST:event_expireActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
@@ -815,9 +825,10 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JPanel Patients;
     private javax.swing.JPanel Pharmacy;
     private javax.swing.JButton add;
-    private javax.swing.JTextField amountfield;
+    private javax.swing.JTextField amount;
     private javax.swing.JTable appointments;
-    private javax.swing.JTextField expirefield;
+    private javax.swing.JTextField expire;
+    private javax.swing.JTextField id;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton22;
@@ -840,7 +851,6 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -854,12 +864,31 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTable medicines;
+    private javax.swing.JLabel name;
+    private javax.swing.JTextField name1;
     private javax.swing.JPanel parent;
+    private javax.swing.JTextField price;
     private javax.swing.JButton remove;
     // End of variables declaration//GEN-END:variables
+
+   public void addmedicine(ActionListener Listener){
+       add.addActionListener(Listener);
+   }
+   public javax.swing.JTextField getId(){
+    return id;
+}
+   public javax.swing.JTextField getAmount(){
+    return amount;
+}
+   public javax.swing.JTextField getName1(){
+    return name1;
+}
+   public javax.swing.JTextField getPrice(){
+    return price;
+}
+   public javax.swing.JTextField getExpire(){
+    return expire;
+}
 }
 
