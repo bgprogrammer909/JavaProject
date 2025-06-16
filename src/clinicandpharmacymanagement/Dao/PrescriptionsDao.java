@@ -4,35 +4,34 @@
  */
 package clinicandpharmacymanagement.Dao;
 
+import clinicandpharmacymanagement.Database.MysqlConnection;
+import clinicandpharmacymanagement.view.model.PrescriptionModel;
+import java.sql.*;
+
 /**
  *
  * @author lenovo
  */
 public class PrescriptionsDao {
-    Connection conn;
+    MysqlConnection mysql = new MysqlConnection();
 
-    public PrescriptionDAO(Connection conn) {
-        this.conn = conn;
-    }
+    public boolean insertPrescription(PrescriptionModel prescription) {
+        String query = "INSERT INTO prescriptions (time, description, medicine, dosage) VALUES (?, ?, ?, ?)";
+        Connection conn = mysql.openConnection();
 
-    public List<Prescription> getAllPrescriptions() {
-        List<Prescription> list = new ArrayList<>();
-        String query = "SELECT * FROM prescriptions";
         try {
             PreparedStatement stmt = conn.prepareStatement(query);
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                Prescription p = new Prescription(
-                    rs.getString("time"),
-                    rs.getString("description"),
-                    rs.getString("medicine"),
-                    rs.getString("dosage")
-                );
-                list.add(p);
-            }
+            stmt.setString(1, prescription.getTime());
+            stmt.setString(2, prescription.getDescription());
+            stmt.setString(3, prescription.getMedicine());
+            stmt.setString(4, prescription.getDosage());
+
+            int result = stmt.executeUpdate();
+            return result > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            return false;
+        } finally {
+            mysql.closeConnection(conn);
         }
-        return list;
     }
 }
