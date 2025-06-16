@@ -54,12 +54,12 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        PrescriptionTable = new javax.swing.JTable();
         Doctor = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        DoctorTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         YesButton = new javax.swing.JButton();
 
@@ -324,7 +324,7 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(98, 138, 203));
         jLabel7.setText("Here are the prescriptions for your medication:");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        PrescriptionTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -335,7 +335,7 @@ public class SampleCard extends javax.swing.JFrame {
                 "Time", "Description", "Medicine", "Dosage"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(PrescriptionTable);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -387,7 +387,7 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(98, 138, 203));
         jLabel8.setText("Here are details about the doctors:");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        DoctorTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -398,7 +398,7 @@ public class SampleCard extends javax.swing.JFrame {
                 "Name", "Speciality", "Available at"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(DoctorTable);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(98, 138, 203));
@@ -547,11 +547,13 @@ public class SampleCard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Doctor;
     private javax.swing.JButton DoctorButton;
+    private javax.swing.JTable DoctorTable;
     private javax.swing.JPanel Home;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel Medicine;
     private javax.swing.JButton MedicineButton;
     private javax.swing.JPanel MyRecords;
+    private javax.swing.JTable PrescriptionTable;
     private javax.swing.JButton RecordButton;
     private javax.swing.JPanel SideMenu;
     private javax.swing.JButton YesButton;
@@ -577,11 +579,9 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 
     public JTable getjTable1() {
-        return jTable1;
+        return PrescriptionTable;
     }
 }
