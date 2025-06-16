@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package project2;
+package clinicandpharmacymanagement.view;
 
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class StaffDash extends javax.swing.JFrame {
 
     /**
-     * Creates new form staffdashh
+     * Creates new form staffdash
      */
     public StaffDash() {
         initComponents();
@@ -705,7 +705,7 @@ public class StaffDash extends javax.swing.JFrame {
         int amount = Integer.parseInt(amountfield.getText());
         if (amount < 30) {
             // Insert into database using DAO
-            System.out.println("Medicine added.");
+            JOptionPane.showMessageDialog(this,"Medicine added.");
         } else {
             JOptionPane.showMessageDialog(this, "Stock must be less than 30 to add!");
         }
@@ -749,7 +749,7 @@ public class StaffDash extends javax.swing.JFrame {
     private void removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeActionPerformed
         // TODO add your handling code here:
         try {
-        String expiry = expirefield.getText(); 
+        String expiry = expirefield.getText(); // format: yyyy-MM-dd
         LocalDate expiryDate = LocalDate.parse(expiry);
         LocalDate today = LocalDate.now();
         LocalDate nextMonthStart = today.plusMonths(1).withDayOfMonth(1);
