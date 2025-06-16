@@ -12,14 +12,14 @@ import clinicandpharmacymanagement.view.model.BillingsModel;
  * @author user
  */
 public class BillingsController {
-    private Billingsdao billingsdao;
+    private Billingsdao billingsDAO;
 
     public BillingsController() {
-        billingsdao = new Billingsdao();
+        billingsDAO = new Billingsdao();
     }
 
     public boolean addBilling(String id, String medicinename, int unit, String price) {
         BillingsModel model = new BillingsModel(id, medicinename, unit, price);
-        return billingsdao.insertMedicine(model);
+        return billingsDAO.insertBilling(model); 
     }
 }
