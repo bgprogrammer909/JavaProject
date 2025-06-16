@@ -10,16 +10,23 @@ package clinicandpharmacymanagement.view.model;
  */
 public class BillingsModel {
     private String id;
-    private String medicinename;
+    private String medicineName;
     private int unit;
-    private String price;
+    private double price;
+    private String expire;
 
-    // Constructor
-    public BillingsModel(String id, String medicinename, int unit, String price) {
+    // Constructor for billing details
+    public BillingsModel(String id, String medicineName, int unit, double price, String expire) {
         this.id = id;
-        this.medicinename = medicinename;
+        this.medicineName = medicineName;
         this.unit = unit;
         this.price = price;
+        this.expire = expire;
+    }
+
+    // Constructor for expiry-only use case
+    public BillingsModel(String expire) {
+        this.expire = expire;
     }
 
     // Getters
@@ -27,42 +34,45 @@ public class BillingsModel {
         return id;
     }
 
-    public String getMedicinename() {
-        return medicinename;
+    public String getMedicineName() {
+        return medicineName;
     }
 
     public int getUnit() {
         return unit;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    // Optional: Auto-calculated total
-    public double getTotal() {
-        try {
-            return unit * Double.parseDouble(price);
-        } catch (NumberFormatException e) {
-            return 0.0;
-        }
+    public String getExpire() {
+        return expire;
     }
 
-    // Setters (if needed)
+    // Auto-calculated total price
+    public double getTotal() {
+        return unit * price;
+    }
+
+    // Setters
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setMedicinename(String medicinename) {
-        this.medicinename = medicinename;
+    public void setMedicineName(String medicineName) {
+        this.medicineName = medicineName;
     }
 
     public void setUnit(int unit) {
         this.unit = unit;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
-    
+
+    public void setExpire(String expire) {
+        this.expire = expire;
+    }
 }
