@@ -4,6 +4,7 @@
  */
 package clinicandpharmacymanagement.view.model;
 
+
 import java.util.Date;
 
 
@@ -106,3 +107,31 @@ public class PatientModel {
 
     
 }   
+
+    public String getDoctor() {
+        return doctor;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    // Setters (optional)
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+    
+}
+
