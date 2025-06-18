@@ -4,32 +4,109 @@
  */
 package clinicandpharmacymanagement.view.model;
 
+
+import java.util.Date;
+
+
+
 /**
  *
- * @author user
+ * @author AngkitKharel
  */
 public class PatientModel {
-    private String patientId;
-    private String name;
-    private String doctor;
-    private String time;
 
-    // Constructor
-    public PatientModel(String patientId, String name, String doctor, String time) {
-        this.patientId = patientId;
-        this.name = name;
-        this.doctor = doctor;
-        this.time = time;
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
     }
 
-    // Getters
-    public String getPatientId() {
-        return patientId;
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
     }
 
+    /**
+     * @return the name
+     */
     public String getName() {
         return name;
     }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the address
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * @param address the address to set
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /**
+     * @return the phone
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * @param phone the phone to set
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    /**
+     * @return the condition
+     */
+    public String getCondition() {
+        return condition;
+    }
+
+    /**
+     * @param condition the condition to set
+     */
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    /**
+     * @return the emergency
+     */
+    public String getEmergency() {
+        return emergency;
+    }
+
+    /**
+     * @param emergency the emergency to set
+     */
+    public void setEmergency(String emergency) {
+        this.emergency = emergency;
+    }
+    private String id;
+    private String name;
+    private String address;
+    private String phone;
+    private String condition;
+    private String emergency;
+
+    
+}   
 
     public String getDoctor() {
         return doctor;
@@ -57,3 +134,4 @@ public class PatientModel {
     }
     
 }
+

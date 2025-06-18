@@ -12,18 +12,7 @@ import java.util.Date;
  *
  * @author AngkitKharel
  */
-public class DoctorModel {
-    private String id;
-    private String name;
-    private String time;
-    private String phone;
-
-    public DoctorModel(String id, String name, String time, String phone) {
-        this.id = id;
-        this.name = name;
-        this.time = time;
-        this.phone = phone;
-    }
+public class BillingModel {
 
     /**
      * @return the id
@@ -40,31 +29,31 @@ public class DoctorModel {
     }
 
     /**
-     * @return the name
+     * @return the date
      */
-    public String getName() {
-        return name;
+    public String getDate() {
+        return date;
     }
 
     /**
-     * @param name the name to set
+     * @param date the date to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     /**
-     * @return the time
+     * @return the customername
      */
-    public String getTime() {
-        return time;
+    public String getCustomername() {
+        return customername;
     }
 
     /**
-     * @param time the time to set
+     * @param customername the customername to set
      */
-    public void setTime(String time) {
-        this.time = time;
+    public void setCustomername(String customername) {
+        this.customername = customername;
     }
 
     /**
@@ -81,9 +70,27 @@ public class DoctorModel {
         this.phone = phone;
     }
 
+    /**
+     * @return the amount
+     */
+    public String getAmount() {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
     
-   
-   
-}
-         
-     
+    
+    private String id;
+    private String date;
+    private String customername;
+    private String phone;
+    private String amount;
+
+    
+}   
