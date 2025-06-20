@@ -13,7 +13,6 @@
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Medicinedao.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/MedicineModel.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Database/MysqlConnection.java</file>
-            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/UserData.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/DoctorModel.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Database/Dbconnection.java</file>
@@ -26,6 +25,9 @@
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Billingdao.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/BillingModel.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/BillingModel.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/AdminDashboardPharma1.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/LoginRequest.java</file>
         </group>
     </open-files>
 </project-private>
