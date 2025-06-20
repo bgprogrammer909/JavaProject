@@ -20,6 +20,7 @@ StaffDash view;
 Medicinedao dao;
     public StaffController(StaffDash view) {
         this.view= view;
+        
         this.view.addmedicine(new Adder());
         
     }

@@ -68,7 +68,7 @@ public class LoginController {
                 }else if(user.getUtype().equals("patient")){
                     JOptionPane.showMessageDialog(view, "logged in sucessful");
                     SampleCard dashboardView=new SampleCard();
-                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
+                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user,loginData);
                     dashboardControl.open();
                     close();
                 }

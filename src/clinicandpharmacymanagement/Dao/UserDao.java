@@ -189,5 +189,51 @@ public class UserDao {
                 return false;
             }
         }
+    public boolean updatePatientProfile(UserData user) {
+    // Changed to use email instead of ID
+    String query = "UPDATE users SET fname=?, gender=?, blood_group=?, age=? WHERE email=?";
     
+    try (Connection conn = mysql.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(query)) {
+        
+        stmt.setString(1, user.getName());
+        stmt.setString(2, user.getGender());
+        stmt.setString(3, user.getBloodGroup());
+        stmt.setInt(4, user.getAge());
+        stmt.setString(5, user.getEmail());  // Using email as identifier
+        
+        int rowsUpdated = stmt.executeUpdate();
+        return rowsUpdated > 0;
+        
+    } catch (SQLException e) {
+        System.err.println("Update error: " + e.getMessage());
+        return false;
+    }
+}
+public UserData getPatientByEmail(String email,UserData user) {
+    String query = "SELECT fname,id, age, blood_group, gender FROM users WHERE email=?";
+    
+    try (Connection conn = mysql.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(query)) {
+        
+        stmt.setString(1, email);
+        
+        try (ResultSet rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                user.setName(rs.getString("fname"));
+                user.setId(rs.getString("id"));
+                user.setAge(rs.getInt("age"));
+                user.setBloodGroup(rs.getString("blood_group"));
+                user.setGender(rs.getString("gender"));
+                user.setEmail(email);
+                return user;
+            }
+            return null;  // No patient found with this email
+        }
+        
+    } catch (SQLException e) {
+        System.err.println("Query error: " + e.getMessage());
+        return null;
+    }
+}
 }

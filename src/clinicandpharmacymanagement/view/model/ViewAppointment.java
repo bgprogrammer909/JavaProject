@@ -6,40 +6,39 @@ package clinicandpharmacymanagement.view.model;
 
 /**
  *
- * @author user
+ * @author ACER
  */
-public class AppointmentModel {
-    
-    private int id;
-    private int patientId;
-    private int doctorId;
+public class ViewAppointment {
+    private int appointmentId;
+    private String doctorName;
+    private String patientName;
     private String timeSlot;
     private String status;
 
-    // Getters & Setters
+    // Getters and Setters
 
-    public int getId() {
-        return id;
+    public int getAppointmentId() {
+        return appointmentId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAppointmentId(int appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
-    public int getPatientId() {
-        return patientId;
+    public String getDoctorName() {
+        return doctorName;
     }
 
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
-    public int getDoctorId() {
-        return doctorId;
+    public String getPatientName() {
+        return patientName;
     }
 
-    public void setDoctorId(int doctorId) {
-        this.doctorId = doctorId;
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 
     public String getTimeSlot() {
@@ -58,4 +57,4 @@ public class AppointmentModel {
         this.status = status;
     }
     
-   }
+}

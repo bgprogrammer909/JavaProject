@@ -9,6 +9,7 @@ import clinicandpharmacymanagement.view.model.DoctorModel;
 
 
 import java.sql.*;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -99,6 +100,24 @@ public class Doctordao {
         }finally {
             mysql.closeConnection(conn);
         }
+    }
+
+    public LocalTime[] getDoctorAvailableTime(int doctorId) {
+        String query = "SELECT available_time_from, available_time_to FROM doctor WHERE doctor_id = ?";
+        try (Connection conn = mysql.openConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setInt(1, doctorId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                LocalTime from = rs.getTime("available_time_from").toLocalTime();
+                LocalTime to = rs.getTime("available_time_to").toLocalTime();
+                return new LocalTime[]{from, to};
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 

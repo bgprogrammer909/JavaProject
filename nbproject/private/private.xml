@@ -17,6 +17,18 @@
             <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/UserData.java</file>
             <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/UserCountDao.java</file>
             <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/SampleCard.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/InfoDetail.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/InfoDetailController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/HomepageController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/PrescriptionController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/PatientDashboardController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/appointmentbookin.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/BookAppointment.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/Appointmentdao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/AppointmentModel.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/StaffDash.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/ViewAppointment.java</file>
         </group>
     </open-files>
 </project-private>
