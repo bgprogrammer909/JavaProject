@@ -7,12 +7,15 @@ package clinicandpharmacymanagement.controller;
 
 import clinicandpharmacymanagement.Dao.Appointmentdao;
 import clinicandpharmacymanagement.Dao.Doctordao;
+import clinicandpharmacymanagement.Dao.PrescriptionsDao;
 import clinicandpharmacymanagement.Dao.UserDao;
 import clinicandpharmacymanagement.view.SampleCard;
 import clinicandpharmacymanagement.view.InfoDetail;
 import clinicandpharmacymanagement.view.model.DoctorModel;
 import clinicandpharmacymanagement.view.model.LoginRequest;
+import clinicandpharmacymanagement.view.model.PrescriptionModel;
 import clinicandpharmacymanagement.view.model.UserData;
+import clinicandpharmacymanagement.view.model.ViewAppointment;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
@@ -42,8 +45,100 @@ public class PatientDashboardController {
         this.view.prof(new Names());
         this.view.refreshDoctor(new LoadDoctorDataListener());
         this.view.Book(new Appoint());
-        
+        this.view.setPrescription(new LoadLatestPrescription());
+        this.view.getAllPrescription(new LoadAllPrescription() );
+        this.view.getLatestPrescription(new LoadLatestPrescription());
+        this.view.getAppointings(new LoadPatientAppointmentsListener());
     }
+    class LoadAllPrescription implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        PrescriptionsDao prescriptionDao=new PrescriptionsDao();
+        String userId = user.getId();  // or however you have the patient id
+        List<PrescriptionModel> prescriptions = prescriptionDao.getAllPrescriptionsByUserId(userId);
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Prescription ID");
+        model.addColumn("Morning");
+        model.addColumn("Day");
+        model.addColumn("Night");
+        model.addColumn("Date");
+
+        if (prescriptions != null) {
+            for(PrescriptionModel p:prescriptions){
+            model.addRow(new Object[]{
+                p.getPrescriptionId(),
+                p.getMorningDescription(),
+                p.getDayDescription(),
+                p.getNightDescription(),
+                p.getCreatedAt()
+            });
+            }
+        } else {
+            JOptionPane.showMessageDialog(view, "No prescription found.");
+        }
+
+        view.getPrescriptionTable().setModel(model);
+    }
+}
+class LoadPatientAppointmentsListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String userId = user.getId();  // or however you store the patient ID
+        Appointmentdao appointmentDao=new Appointmentdao();
+        List<ViewAppointment> appointments = appointmentDao.getAppointmentsByUserId(userId);
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Appointment ID");
+        model.addColumn("Doctor");
+        model.addColumn("Time Slot");
+        model.addColumn("Status");
+
+        for (ViewAppointment appt : appointments) {
+            model.addRow(new Object[]{
+                appt.getAppointmentId(),
+                appt.getDoctorName(),
+                appt.getTimeSlot(),
+                appt.getStatus()
+            });
+        }
+
+        view.getAppointmentTable().setModel(model);
+    }
+}
+
+    class LoadLatestPrescription implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        PrescriptionsDao prescriptionDao=new PrescriptionsDao();
+        String userId = user.getId();  // or however you have the patient id
+        PrescriptionModel p = prescriptionDao.getLatestPrescriptionByUserId(userId);
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Prescription ID");
+        model.addColumn("Morning");
+        model.addColumn("Day");
+        model.addColumn("Night");
+        model.addColumn("Date");
+
+        if (p != null) {
+            model.addRow(new Object[]{
+                p.getPrescriptionId(),
+                p.getMorningDescription(),
+                p.getDayDescription(),
+                p.getNightDescription(),
+                p.getCreatedAt()
+            });
+        } else {
+            JOptionPane.showMessageDialog(view, "No prescription found.");
+        }
+
+        view.getPrescriptionTable().setModel(model);
+    }
+}
+    
+    
+
 class Appoint implements ActionListener {
 
     @Override

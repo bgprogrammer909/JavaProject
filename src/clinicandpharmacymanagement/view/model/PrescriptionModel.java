@@ -10,48 +10,69 @@ package clinicandpharmacymanagement.view.model;
  */
 
 public class PrescriptionModel {
-    private String time;
-    private String description;
-    private String medicine;
-    private String dosage;
+    private int prescriptionId;
+    private String userId;
+    private String morningDescription;
+    private String dayDescription;
+    private String nightDescription;
+    private String createdAt;
 
-    public PrescriptionModel(String time, String description, String medicine, String dosage) {
-        this.time = time;
-        this.description = description;
-        this.medicine = medicine;
-        this.dosage = dosage;
+    // constructor for inserting new prescription
+    public PrescriptionModel(String userId, String morningDescription, String dayDescription, String nightDescription) {
+        this.userId = userId;
+        this.morningDescription = morningDescription;
+        this.dayDescription = dayDescription;
+        this.nightDescription = nightDescription;
     }
 
-    public String getTime() {
-        return time;
+    public String getCreatedAt() {
+        return createdAt;
     }
 
-    public String getDescription() {
-        return description;
+    // getters + setters
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public String getMedicine() {
-        return medicine;
+    public int getPrescriptionId() {
+        return prescriptionId;
     }
 
-    public String getDosage() {
-        return dosage;
+    public void setPrescriptionId(int prescriptionId) {
+        this.prescriptionId = prescriptionId;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public void setMedicine(String medicine) {
-        this.medicine = medicine;
+    public String getMorningDescription() {
+        return morningDescription;
     }
 
-    public void setDosage(String dosage) {
-        this.dosage = dosage;
+    public void setMorningDescription(String morningDescription) {
+        this.morningDescription = morningDescription;
     }
+
+    public String getDayDescription() {
+        return dayDescription;
+    }
+
+    public void setDayDescription(String dayDescription) {
+        this.dayDescription = dayDescription;
+    }
+
+    public String getNightDescription() {
+        return nightDescription;
+    }
+
+    public void setNightDescription(String nightDescription) {
+        this.nightDescription = nightDescription;
+    }
+  
 }
 

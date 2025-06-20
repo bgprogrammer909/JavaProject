@@ -1,6 +1,9 @@
 package clinicandpharmacymanagement.view;
 import clinicandpharmacymanagement.view.MainDashboard;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -62,10 +65,15 @@ public class Paymentdash extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(0, 51, 51));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Examination", "1", "150.00"},
-                {"X-Ray", "1", "80.00"},
-                {"Blood Test", "2", "50.00"},
-                {"Medication", "3", "40.00"},
+                {"Examination", "0", "200.00"},
+                {"X-Ray", "0", "80.00"},
+                {"Blood Test", "0", "50.00"},
+                {"Service Fees", "1", "150.00"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null}
             },
@@ -83,6 +91,7 @@ public class Paymentdash extends javax.swing.JFrame {
 
         jTextField2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jTextField2.setText("360.00");
+        jTextField2.setEnabled(false);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -127,7 +136,6 @@ public class Paymentdash extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextField1.setFont(new java.awt.Font("Arial Narrow", 0, 12)); // NOI18N
-        jTextField1.setText("ENTER YOUR ID");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -160,24 +168,6 @@ public class Paymentdash extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- double total = 0.0;
-
-    for (int i = 0; i < jTable1.getRowCount(); i++) {
-        Object quantityObj = jTable1.getValueAt(i, 1);
-        Object costObj = jTable1.getValueAt(i, 2);
-
-        if (quantityObj != null && costObj != null) {
-            try {
-                int quantity = Integer.parseInt(quantityObj.toString());
-                double cost = Double.parseDouble(costObj.toString());
-                total += quantity * cost;
-            } catch (NumberFormatException e) {
-                // If the row is empty or not properly formatted, ignore
-            }
-        }
-    }
-
-    jTextField2.setText(String.format("%.2f", total));
 
                                         
  
@@ -186,36 +176,11 @@ public class Paymentdash extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      this.dispose(); // close current Paymentdash window
-    new MainDashboard().setVisible(true);
+      
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  javax.swing.table.TableModel model = jTable1.getModel();
-    
-    // Start building the bill
-    StringBuilder bill = new StringBuilder();
-    bill.append("=========== HOSPITAL BILL ===========\n");
-    bill.append("Patient ID: ").append(jTextField1.getText()).append("\n\n");
-    bill.append(String.format("%-20s %-10s %-10s\n", "Service", "Qty", "Cost"));
-    bill.append("-------------------------------------------\n");
-    
-    // Loop through table rows
-    for (int row = 0; row < model.getRowCount(); row++) {
-        Object service = model.getValueAt(row, 0);
-        Object quantity = model.getValueAt(row, 1);
-        Object cost = model.getValueAt(row, 2);
 
-        if (service != null && quantity != null && cost != null) {
-            bill.append(String.format("%-20s %-10s %-10s\n", service, quantity, cost));
-        }
-    }
-    
-    bill.append("\nTotal Amount: NPR ").append(jTextField2.getText());
-    bill.append("\n=====================================");
-
-    // Show the bill in a message dialog
-    JOptionPane.showMessageDialog(this, bill.toString(), "Generated Bill", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
@@ -245,5 +210,28 @@ public class Paymentdash extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+public JButton getCalculateButton() {
+    return jButton1;
+}
+
+public JButton getGenerateButton() {
+    return jButton2;
+}
+
+public JButton getBackButton() {
+    return jButton4;
+}
+
+public JTable getTable() {
+    return jTable1;
+}
+
+public JTextField getTotalField() {
+    return jTextField2;
+}
+
+public JTextField getPatientIdField() {
+    return jTextField1;
+}
 
 }

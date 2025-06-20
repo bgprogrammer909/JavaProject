@@ -13,61 +13,57 @@ import java.util.Date;
  * @author AngkitKharel
  */
 public class MedicineModel {
-    private String  medicinename;
+    
+    private int id;
+    private String name;
+    private double price;
+    private int amount;
+    private Date expiryDate;
 
-    public String getMedicinename() {
-        return medicinename;
-    }
+    // constructor, getters, setters
 
-    public void setMedicinename(String medicinename) {
-        this.medicinename = medicinename;
-    }
-
-    public Date getExpirydate() {
-        return expirydate;
-    }
-
-    public void setExpirydate(Date expirydate) {
-        this.expirydate = expirydate;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-    private int unit;
-    private Date expirydate;
-    private String id;
-    private String price;
-
-    public MedicineModel(String medicinename, int unit, Date expirydate, String id, String price) {
-        this.medicinename = medicinename;
-        this.unit = unit;
-        this.expirydate = expirydate;
-        this.id = id;
-        this.price = price;
-    }
-
-    public int getUnit() {
-        return unit;
-    }
-
-    public void setUnit(int unit) {
-        this.unit = unit;
-    }
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
-     
-     
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public Date getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(Date expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+    
 }
+
+
          
      

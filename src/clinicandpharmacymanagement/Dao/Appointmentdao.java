@@ -10,7 +10,7 @@ package clinicandpharmacymanagement.Dao;
  */
 import clinicandpharmacymanagement.Database.MysqlConnection;
 import clinicandpharmacymanagement.view.model.AppointmentModel;
-import java.awt.event.ActionListener;
+import clinicandpharmacymanagement.view.model.ViewAppointment;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -101,6 +101,63 @@ public class Appointmentdao {
             return false;
         }
     }
-    
+    public List<ViewAppointment> getAllAppointmentsWithNames() {
+    List<ViewAppointment> list = new ArrayList<>();
+    String query = "SELECT a.id AS appointment_id, d.name AS doctor_name, u.fname AS patient_name, " +
+                   "a.time_slot, a.status " +
+                   "FROM appointments a " +
+                   "JOIN doctor d ON a.doctor_id = d.doctor_id " +
+                   "JOIN users u ON a.patient_id = u.id";
+
+    try (Connection conn = mysql.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(query);
+         ResultSet rs = stmt.executeQuery()) {
+
+        while (rs.next()) {
+            ViewAppointment va = new ViewAppointment();
+            va.setAppointmentId(rs.getInt("appointment_id"));
+            va.setDoctorName(rs.getString("doctor_name"));
+            va.setPatientName(rs.getString("patient_name"));
+            va.setTimeSlot(rs.getString("time_slot"));
+            va.setStatus(rs.getString("status"));
+            list.add(va);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return list;
+}
+public List<ViewAppointment> getAppointmentsByUserId(String userId) {
+        List<ViewAppointment> appointments = new ArrayList<>();
+
+        String sql = "SELECT a.id, a.time_slot, a.status, d.name AS doctor_name " +
+                     "FROM appointments a " +
+                     "JOIN doctor d ON a.doctor_id = d.doctor_id " +
+                     "WHERE a.patient_id = ? ORDER BY a.id DESC";
+
+        try (Connection conn = mysql.openConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, userId);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                ViewAppointment appt = new ViewAppointment();
+                appt.setAppointmentId(rs.getInt("id"));
+                appt.setDoctorName(rs.getString("doctor_name"));
+                appt.setTimeSlot(rs.getString("time_slot"));
+                appt.setStatus(rs.getString("status"));
+                appointments.add(appt);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return appointments;
+    }
+}
+
   
 }

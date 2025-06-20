@@ -7,6 +7,7 @@ package clinicandpharmacymanagement.view;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -35,6 +36,7 @@ public class SampleCard extends javax.swing.JFrame {
         HomeButton = new javax.swing.JButton();
         DoctorButton = new javax.swing.JButton();
         RecordButton = new javax.swing.JButton();
+        myAppointments = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         Home = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -58,7 +60,9 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        PrescriptionTable = new javax.swing.JTable();
+        medTable = new javax.swing.JTable();
+        all = new javax.swing.JButton();
+        latest = new javax.swing.JButton();
         Doctor = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -67,6 +71,11 @@ public class SampleCard extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         DocTable = new javax.swing.JTable();
         refreshDoc = new javax.swing.JButton();
+        ViewMyAppointments = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        appoint = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -113,31 +122,52 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        myAppointments.setBackground(new java.awt.Color(138, 174, 224));
+        myAppointments.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        myAppointments.setForeground(new java.awt.Color(255, 255, 255));
+        myAppointments.setText("My Appointment");
+        myAppointments.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                myAppointmentsMouseClicked(evt);
+            }
+        });
+        myAppointments.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myAppointmentsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout SideMenuLayout = new javax.swing.GroupLayout(SideMenu);
         SideMenu.setLayout(SideMenuLayout);
         SideMenuLayout.setHorizontalGroup(
             SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideMenuLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(RecordButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DoctorButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MedicineButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RecordButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MedicineButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(myAppointments, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(DoctorButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(SideMenuLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SideMenuLayout.setVerticalGroup(
             SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideMenuLayout.createSequentialGroup()
-                .addGap(126, 126, 126)
+                .addGap(160, 160, 160)
                 .addComponent(HomeButton)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(RecordButton)
-                .addGap(40, 40, 40)
+                .addGap(28, 28, 28)
                 .addComponent(MedicineButton)
-                .addGap(40, 40, 40)
+                .addGap(26, 26, 26)
                 .addComponent(DoctorButton)
-                .addContainerGap(292, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(myAppointments)
+                .addContainerGap(261, Short.MAX_VALUE))
         );
 
         getContentPane().add(SideMenu, java.awt.BorderLayout.LINE_START);
@@ -151,7 +181,7 @@ public class SampleCard extends javax.swing.JFrame {
 
         welcome.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         welcome.setForeground(new java.awt.Color(98, 138, 203));
-        welcome.setText("Welcome Shrijan !!!");
+        welcome.setText("Welcome !!!");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -177,14 +207,14 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         jPanel1.add(Home, "card2");
@@ -331,7 +361,7 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(MyRecordsLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         jPanel1.add(MyRecords, "card2");
@@ -344,18 +374,22 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(98, 138, 203));
         jLabel7.setText("Here are the prescriptions for your medication:");
 
-        PrescriptionTable.setModel(new javax.swing.table.DefaultTableModel(
+        medTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Time", "Description", "Medicine", "Dosage"
+                "Prescription ID", "Morning", "Day", "Night", "Date"
             }
         ));
-        jScrollPane1.setViewportView(PrescriptionTable);
+        jScrollPane1.setViewportView(medTable);
+
+        all.setText("ALL RECORDS");
+
+        latest.setText("LATEST");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -363,20 +397,31 @@ public class SampleCard extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(latest)
+                .addGap(18, 18, 18)
+                .addComponent(all)
+                .addGap(69, 69, 69))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(latest)
+                    .addComponent(all))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout MedicineLayout = new javax.swing.GroupLayout(Medicine);
@@ -386,14 +431,14 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(MedicineLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         MedicineLayout.setVerticalGroup(
             MedicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MedicineLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(Medicine, "card2");
@@ -468,9 +513,9 @@ public class SampleCard extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(YesButton))
@@ -487,19 +532,82 @@ public class SampleCard extends javax.swing.JFrame {
         DoctorLayout.setHorizontalGroup(
             DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addGap(34, 34, 34))
         );
         DoctorLayout.setVerticalGroup(
             DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DoctorLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
         jPanel1.add(Doctor, "card2");
+
+        ViewMyAppointments.setBackground(new java.awt.Color(213, 222, 238));
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(98, 138, 203));
+        jLabel9.setText("Here are details about the doctors:");
+
+        appoint.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Email", "Speciality", "Phone", "From", "To"
+            }
+        ));
+        jScrollPane4.setViewportView(appoint);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 148, Short.MAX_VALUE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
+        );
+
+        javax.swing.GroupLayout ViewMyAppointmentsLayout = new javax.swing.GroupLayout(ViewMyAppointments);
+        ViewMyAppointments.setLayout(ViewMyAppointmentsLayout);
+        ViewMyAppointmentsLayout.setHorizontalGroup(
+            ViewMyAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ViewMyAppointmentsLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+        );
+        ViewMyAppointmentsLayout.setVerticalGroup(
+            ViewMyAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ViewMyAppointmentsLayout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
+        );
+
+        jPanel1.add(ViewMyAppointments, "card2");
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -513,10 +621,6 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_HomeButtonActionPerformed
-
-    private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
-       
-    }//GEN-LAST:event_editActionPerformed
 
     private void RecordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecordButtonActionPerformed
         // TODO add your handling code here:
@@ -542,14 +646,30 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel1.revalidate();
     }//GEN-LAST:event_DoctorButtonActionPerformed
 
-    private void YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesButtonActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_YesButtonActionPerformed
-
     private void refreshDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshDocActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_refreshDocActionPerformed
+
+    private void YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesButtonActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_YesButtonActionPerformed
+
+    private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
+
+    }//GEN-LAST:event_editActionPerformed
+
+    private void myAppointmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myAppointmentsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_myAppointmentsActionPerformed
+
+    private void myAppointmentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myAppointmentsMouseClicked
+        // TODO add your handling code here:
+        jPanel1.removeAll();
+        jPanel1.add(ViewMyAppointments);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_myAppointmentsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -595,11 +715,13 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JPanel Medicine;
     private javax.swing.JButton MedicineButton;
     private javax.swing.JPanel MyRecords;
-    private javax.swing.JTable PrescriptionTable;
     private javax.swing.JButton RecordButton;
     private javax.swing.JPanel SideMenu;
+    private javax.swing.JPanel ViewMyAppointments;
     private javax.swing.JButton YesButton;
     private javax.swing.JLabel age;
+    private javax.swing.JButton all;
+    private javax.swing.JTable appoint;
     private javax.swing.JLabel bloodtype;
     private javax.swing.JButton edit;
     private javax.swing.JLabel gender;
@@ -614,13 +736,19 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JButton latest;
+    private javax.swing.JTable medTable;
+    private javax.swing.JButton myAppointments;
     private javax.swing.JLabel name;
     private javax.swing.JButton refreshDoc;
     private javax.swing.JLabel welcome;
@@ -674,5 +802,24 @@ public class SampleCard extends javax.swing.JFrame {
         return id;
     }
 
-    
+    public void setPrescription(ActionListener listener){
+    MedicineButton.addActionListener(listener);
+    }
+
+    public JTable getPrescriptionTable() {
+        return medTable;
+    }
+    public void getAllPrescription(ActionListener listener){
+        all.addActionListener(listener);
+    }
+    public void getLatestPrescription(ActionListener listener){
+        latest.addActionListener(listener);
+    }
+
+    public JTable getAppointmentTable() {
+        return appoint;
+    }
+    public void getAppointings(ActionListener listener){
+        myAppointments.addActionListener(listener);
+    }
 }
