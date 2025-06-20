@@ -20,22 +20,26 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author AngkitKharel
  */
 public class UserDaoTest {
-    
+
     public UserDaoTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
+        System.out.println("Setup class");
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
+
     }
-    
+
     @BeforeEach
     public void setUp() {
+        System.out.println("Setup before each class");
+
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
@@ -113,6 +117,5 @@ public class UserDaoTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }
-git 
