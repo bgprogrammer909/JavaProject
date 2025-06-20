@@ -100,4 +100,19 @@ public class UserDaoTest {
         fail("The test case is a prototype.");
     }
 
- 
+    /**
+     * Test of getAllUsers method, of class UserDao.
+     */
+    @Test
+    public void testGetAllUsers() {
+        System.out.println("getAllUsers");
+        UserDao instance = new UserDao();
+        List<UserData> expResult = null;
+        List<UserData> result = instance.getAllUsers();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
+}
+git 
