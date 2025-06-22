@@ -214,6 +214,11 @@ public class MedicineEntry extends javax.swing.JFrame {
 
         delete.setBackground(new java.awt.Color(204, 0, 0));
         delete.setText("Delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -372,6 +377,25 @@ public class MedicineEntry extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_SearchTextActionPerformed
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+        {
+        int selectedRow = jTable1.getSelectedRow();
+
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Please select a row to delete.");
+        return;
+    }
+
+    int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this medicine?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+        model.removeRow(selectedRow);
+        JOptionPane.showMessageDialog(this, "Medicine deleted successfully.");
+    }
+}
+    }//GEN-LAST:event_deleteActionPerformed
 
     /**
      * @param args the command line arguments
