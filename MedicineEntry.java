@@ -51,6 +51,7 @@ public class MedicineEntry extends javax.swing.JFrame {
         SearchText = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(213, 222, 238));
@@ -63,7 +64,7 @@ public class MedicineEntry extends javax.swing.JFrame {
 
         jLabel2.setText("Name:");
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel3.setText("Medicine Entry");
 
         jLabel4.setText("Batch:");
@@ -175,7 +176,7 @@ public class MedicineEntry extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         jTable1.setBackground(new java.awt.Color(213, 222, 238));
@@ -192,7 +193,7 @@ public class MedicineEntry extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setText("Search Medicine");
 
         Searchbutton.setBackground(new java.awt.Color(51, 153, 255));
@@ -211,6 +212,14 @@ public class MedicineEntry extends javax.swing.JFrame {
 
         jLabel9.setText("Search by name or category");
 
+        delete.setBackground(new java.awt.Color(204, 0, 0));
+        delete.setText("Delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,21 +229,7 @@ public class MedicineEntry extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(163, 163, 163)
-                                        .addComponent(Searchbutton))
-                                    .addComponent(SearchText, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,8 +245,7 @@ public class MedicineEntry extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Searchbutton)
                             .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
+
                 .addContainerGap())
         );
 
@@ -312,7 +306,8 @@ public class MedicineEntry extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
+        
         {
           MainDashboard dashboard = new MainDashboard();  
     dashboard.setVisible(true);                    
@@ -359,6 +354,25 @@ public class MedicineEntry extends javax.swing.JFrame {
         
     }//GEN-LAST:event_SearchTextActionPerformed
 
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+        {
+        int selectedRow = jTable1.getSelectedRow();
+
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Please select a row to delete.");
+        return;
+    }
+
+    int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this medicine?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+        model.removeRow(selectedRow);
+        JOptionPane.showMessageDialog(this, "Medicine deleted successfully.");
+    }
+}
+    }//GEN-LAST:event_deleteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -398,6 +412,7 @@ public class MedicineEntry extends javax.swing.JFrame {
     private javax.swing.JTextField SearchText;
     private javax.swing.JButton Searchbutton;
     private javax.swing.JTextField batchTextField;
+    private javax.swing.JButton delete;
     private javax.swing.JTextField expiryDateTextField;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
