@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+<<<<<<< HEAD
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/Registration.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/PatientDashboard.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/ClinicAndPharmacyManagement.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Controller/PatientDashboardController.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/AdminDashboardPharma.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/HomePage.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/LoginView.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Database/MysqlConnection.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/SampleCard.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/appointmentbookin.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/StaffDash.java</file>
+=======
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
         <file>
             <url>src/clinicandpharmacymanagement/Dao/Patientdao.java</url>
@@ -77,6 +96,7 @@
             <file>file:/C:/Users/AngkitKharel/Desktop/project/test/clinicandpharmacymanagement/Dao/DoctordaoTest.java</file>
             <file>file:/C:/Users/AngkitKharel/Desktop/project/test/clinicandpharmacymanagement/Dao/MedicinedaoTest.java</file>
 >>>>>>> Stashed changes
+>>>>>>> 195201acb6488b28f0cd15eec59ff01ad1167c73
         </group>
     </open-files>
 </project-private>
