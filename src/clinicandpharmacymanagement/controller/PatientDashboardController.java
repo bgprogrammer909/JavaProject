@@ -185,7 +185,7 @@ class Appoint implements ActionListener {
             JOptionPane.showMessageDialog(null, "Please select a doctor to book an appointment.");
         }
     }
-}
+    }
 
     class LoadDoctorDataListener implements ActionListener {
     @Override
@@ -245,7 +245,7 @@ class Appoint implements ActionListener {
         view.getDocTable().setModel(model);
         view.getDocTable().repaint();  // Force UI refresh
     }
-}
+    }
         private class Names implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {

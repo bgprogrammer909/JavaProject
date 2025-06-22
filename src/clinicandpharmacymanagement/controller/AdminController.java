@@ -202,7 +202,7 @@ public class AdminController {
             }
         }
     }
-}
+    }
 
     class LoadDoctorDataListener implements ActionListener {
     @Override
@@ -262,7 +262,7 @@ public class AdminController {
         view.getDocTable().setModel(model);
         view.getDocTable().repaint();  // Force UI refresh
     }
-}
+    }
 
 
     class LoadDataListener implements ActionListener {
