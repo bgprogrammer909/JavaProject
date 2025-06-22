@@ -54,7 +54,7 @@ public class AdminController {
         int doctors = countDao.countDoctors();
         
         // Update labels with formatted text
-        view.getTotalUser().setText("Total Uer " + total);
+        view.getTotalUser().setText("Total User " + total);
         view.getTotalpatient().setText("Total Patients: " + patients);
         view.getTotalStaff().setText("Total Staff: " + staff);
         view.getTotalDoctor().setText("Total Doctors: " + doctors);
