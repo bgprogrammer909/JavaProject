@@ -39,10 +39,10 @@ public class SignUp extends javax.swing.JFrame {
 
         Left.setBackground(new java.awt.Color(255, 255, 255));
 
-        Password.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        Password.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         Password.setText("Last Name");
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel2.setText("Create Password");
 
         firstname.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +70,7 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel4.setText("First Name");
 
         email.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +85,7 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel5.setText("Email");
 
         Backbutton.setBackground(new java.awt.Color(204, 0, 51));
