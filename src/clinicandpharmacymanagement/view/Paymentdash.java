@@ -191,7 +191,31 @@ public class Paymentdash extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+  javax.swing.table.TableModel model = jTable1.getModel();
+    
+    // Start building the bill
+    StringBuilder bill = new StringBuilder();
+    bill.append("=========== HOSPITAL BILL ===========\n");
+    bill.append("Patient ID: ").append(jTextField1.getText()).append("\n\n");
+    bill.append(String.format("%-20s %-10s %-10s\n", "Service", "Qty", "Cost"));
+    bill.append("-------------------------------------------\n");
+    
+    // Loop through table rows
+    for (int row = 0; row < model.getRowCount(); row++) {
+        Object service = model.getValueAt(row, 0);
+        Object quantity = model.getValueAt(row, 1);
+        Object cost = model.getValueAt(row, 2);
+
+        if (service != null && quantity != null && cost != null) {
+            bill.append(String.format("%-20s %-10s %-10s\n", service, quantity, cost));
+        }
+    }
+    
+    bill.append("\nTotal Amount: NPR ").append(jTextField2.getText());
+    bill.append("\n=====================================");
+
+    // Show the bill in a message dialog
+    JOptionPane.showMessageDialog(this, bill.toString(), "Generated Bill", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
