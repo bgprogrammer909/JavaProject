@@ -141,7 +141,7 @@ public class ResetView extends javax.swing.JFrame {
         });
         getContentPane().add(oldVisible, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 110, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sample image.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sampleimage.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, -3, 480, 310));
 

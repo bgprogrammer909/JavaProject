@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import javax.swing.JCheckBox;
 
+
 /**
  *
  * @author ACER
@@ -98,7 +99,7 @@ public class LoginView extends javax.swing.JFrame {
         jcshow.setText("Show");
         getContentPane().add(jcshow, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 128, 62, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sample image.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sampleimage.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, -23, 510, 370));
 

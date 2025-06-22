@@ -31,7 +31,7 @@ public class SignUp extends javax.swing.JFrame {
         lastname = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         Backbutton = new javax.swing.JButton();
-        termsandconditions = new javax.swing.JCheckBox();
+
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -96,8 +96,7 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        termsandconditions.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        termsandconditions.setText("I agree to all terms and conditions");
+
 
         javax.swing.GroupLayout LeftLayout = new javax.swing.GroupLayout(Left);
         Left.setLayout(LeftLayout);
@@ -109,13 +108,7 @@ public class SignUp extends javax.swing.JFrame {
                         .addGap(290, 290, 290)
                         .addComponent(Backbutton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addComponent(signupbutton))
-                    .addGroup(LeftLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(termsandconditions, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(lastname, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,9 +118,7 @@ public class SignUp extends javax.swing.JFrame {
                                         .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(loginlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(firstname)
-                                                .addComponent(Password)
-                                                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
+
                 .addGap(222, 222, 222))
         );
         LeftLayout.setVerticalGroup(
@@ -150,9 +141,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(termsandconditions)
+
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LeftLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
@@ -160,7 +149,7 @@ public class SignUp extends javax.swing.JFrame {
                         .addGap(81, 81, 81))
                     .addGroup(LeftLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(signupbutton)
+
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -201,6 +190,7 @@ public class SignUp extends javax.swing.JFrame {
     private void signupbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbuttonActionPerformed
         String email = firstname.getText().trim();
     String password = new String(password.getPassword()).trim();
+
 
     if (email.isEmpty() || password.isEmpty()) {
         // Show alert if either email or password is empty
@@ -245,7 +235,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField lastname;
+
     private javax.swing.JLabel loginlabel;
     private javax.swing.JPasswordField password;
     private javax.swing.JButton signupbutton;
