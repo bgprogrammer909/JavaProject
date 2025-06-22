@@ -168,7 +168,29 @@ public class Paymentdash extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+  double total = 0.0;
 
+    for (int i = 0; i < jTable1.getRowCount(); i++) {
+        Object qtyObj = jTable1.getValueAt(i, 1);
+        Object costObj = jTable1.getValueAt(i, 2);
+
+        if (qtyObj == null || costObj == null) continue;
+
+        String qtyStr = qtyObj.toString().trim();
+        String costStr = costObj.toString().trim();
+
+        try {
+            int quantity = Integer.parseInt(qtyStr);
+            double cost = Double.parseDouble(costStr);
+            total += quantity * cost;
+        } catch (NumberFormatException e) {
+            // You can show a warning if needed:
+            // JOptionPane.showMessageDialog(this, "Invalid entry in row " + (i + 1));
+            System.out.println("Invalid number at row " + (i + 1));
+        }
+    }
+
+    jTextField2.setText(String.format("%.2f", total));
                                         
  
 
