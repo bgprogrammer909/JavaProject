@@ -37,7 +37,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="userName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="userEmail" alignment="0" max="32767" attributes="0"/>
                           <Component id="oldPassword" alignment="0" max="32767" attributes="0"/>
                           <Component id="newPassword" alignment="0" pref="128" max="32767" attributes="0"/>
                           <Component id="retypePassword" alignment="0" pref="128" max="32767" attributes="0"/>
@@ -45,8 +45,8 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="retypeVisible" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="retypeVisible1" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="retypeVisible2" min="-2" max="-2" attributes="0"/>
+                          <Component id="newVisible" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="oldVisible" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -77,13 +77,13 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="userName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="oldPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="retypeVisible2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="oldVisible" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -93,7 +93,7 @@
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="newPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="retypeVisible1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="newVisible" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -125,9 +125,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
     </Component>
-    <Component class="javax.swing.JTextField" name="userName">
+    <Component class="javax.swing.JTextField" name="userEmail">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userEmailActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -141,7 +141,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="99" red="33" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Username"/>
+        <Property name="text" type="java.lang.String" value="Email"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -217,20 +217,20 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="retypeVisibleActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="retypeVisible1">
+    <Component class="javax.swing.JCheckBox" name="newVisible">
       <Properties>
         <Property name="text" type="java.lang.String" value="show"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="retypeVisible1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="newVisibleActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="retypeVisible2">
+    <Component class="javax.swing.JCheckBox" name="oldVisible">
       <Properties>
         <Property name="text" type="java.lang.String" value="show"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="retypeVisible2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oldVisibleActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

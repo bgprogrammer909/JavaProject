@@ -16,6 +16,9 @@ public class UserData {
     private String password;
     private String id;
     private String utype;
+    private String gender;
+    private String bloodGroup;
+    private int age;
 
     public UserData( String id,String name, String email, String password, String utype) {
         this.name = name;
@@ -23,6 +26,37 @@ public class UserData {
         this.password = password;
         this.id = id;
         this.utype = utype;
+    }
+
+    public UserData(String name, int age, String gender, String bloodGroup) {
+        this.name = name;
+        this.gender = gender;
+        this.bloodGroup = bloodGroup;
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getUtype() {

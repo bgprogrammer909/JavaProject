@@ -57,31 +57,35 @@ public class RegisterController {
 //            regPassword.setEchoChar('*');
 //        }
     }
-    class RegisterUser implements ActionListener{
+    class RegisterUser implements ActionListener {
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            String name=view.getNameTextField().getText();
-            String email=view.getEmailTextField().getText();
-            String password=String.valueOf(view.getPasswordField().getPassword());
-            String utype="patient";
-            if (name.isEmpty() || email.isEmpty()|| password.isEmpty()){
-                JOptionPane.showMessageDialog(view, "Fill all the fields");
-            } else{
-            UserDao userDao=new UserDao();
-            UserData user=new UserData(name,email,password,utype);
-            boolean result=userDao.register(user);
-            if (result){
-                JOptionPane.showMessageDialog(view,"REGISTER SUCESS!!!!!");
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String name = view.getNameTextField().getText();
+        String email = view.getEmailTextField().getText();
+        String password = String.valueOf(view.getPasswordField().getPassword());
+        String utype = "patient";
+
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(view, "Fill all the fields");
+        } 
+        else if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+            JOptionPane.showMessageDialog(view, "Invalid email format!");
+        }
+        else {
+            UserDao userDao = new UserDao();
+            UserData user = new UserData(name, email, password, utype);
+            boolean result = userDao.register(user);
+            if (result) {
+                JOptionPane.showMessageDialog(view, "REGISTER SUCCESS!!!!!");
                 close();
-                LoginView see=new LoginView();
-                LoginController lcon=new LoginController(see);
+                LoginView see = new LoginView();
+                LoginController lcon = new LoginController(see);
                 lcon.open();
-            }else{
-             JOptionPane.showMessageDialog(view,"REGISTER GONE WRONG!!!!!");   
+            } else {
+                JOptionPane.showMessageDialog(view, "REGISTER GONE WRONG!!!!!");
             }
         }
-        }
-        
     }
+}
 }

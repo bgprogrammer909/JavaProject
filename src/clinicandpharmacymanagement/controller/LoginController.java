@@ -6,13 +6,15 @@ package clinicandpharmacymanagement.controller;
 
 import clinicandpharmacymanagement.Dao.UserDao;
 import clinicandpharmacymanagement.view.AdminDashboardPharma;
-import clinicandpharmacymanagement.view.PatientDashboard;
+
 import clinicandpharmacymanagement.view.model.LoginRequest;
 import clinicandpharmacymanagement.view.model.UserData;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import clinicandpharmacymanagement.view.LoginView;
+import clinicandpharmacymanagement.view.SampleCard;
+import clinicandpharmacymanagement.view.StaffDash;
 
 /**
  *
@@ -65,15 +67,15 @@ public class LoginController {
                     JOptionPane.showMessageDialog(view, "logged failed");
                 }else if(user.getUtype().equals("patient")){
                     JOptionPane.showMessageDialog(view, "logged in sucessful");
-                    PatientDashboard dashboardView=new PatientDashboard();
-                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
+                    SampleCard dashboardView=new SampleCard();
+                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user,loginData);
                     dashboardControl.open();
                     close();
                 }
                 else if(user.getUtype().equals("staff")){
                     JOptionPane.showMessageDialog(view, "logged in sucessful");
-                    PatientDashboard dashboardView=new PatientDashboard();
-                    PatientDashboardController dashboardControl=new PatientDashboardController(dashboardView,user);
+                    StaffDash dashboardView=new StaffDash();
+                    StaffController dashboardControl=new StaffController(dashboardView);
                     dashboardControl.open();
                     close();
                 }else if(user.getUtype().equals("admin")){

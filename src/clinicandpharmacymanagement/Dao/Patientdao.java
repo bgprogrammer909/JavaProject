@@ -34,7 +34,7 @@ public class Patientdao {
         }finally {
             mysql.closeConnection(conn);
         }
- 
+    }
     }
 }
 
