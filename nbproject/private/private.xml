@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
- <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-    
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/RegisterController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/Registration.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/AdminDashboardPharma.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/AdminController.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/ClinicAndPharmacyManagement.java</file>
-            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
-
-   
-        
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/StaffDash.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/model/PatientModel.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/PatientController.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/staffdashh.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/HomePage.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/Dao/PatientDao.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/PatientDashboardController.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/Dao/Medicinedao.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/HomepageController.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/AdminController.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/controller/StaffController.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/model/MedicineModel.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/LoginView.java</file>
-            <file>file:/C:/Users/user/Desktop/pharmacy/JavaProject/src/clinicandpharmacymanagement/view/model/BillingsModel.java</file>
-
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/Registration.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/PatientDashboard.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/ClinicAndPharmacyManagement.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Controller/PatientDashboardController.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/AdminDashboardPharma.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/HomePage.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/LoginView.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/Database/MysqlConnection.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/SampleCard.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/appointmentbookin.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Desktop/sem2/JavaProject/src/clinicandpharmacymanagement/view/StaffDash.java</file>
         </group>
     </open-files>
 </project-private>

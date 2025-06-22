@@ -33,6 +33,7 @@ public class SampleCard extends javax.swing.JFrame {
         HomeButton = new javax.swing.JButton();
         DoctorButton = new javax.swing.JButton();
         RecordButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Home = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -107,6 +108,9 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Screenshot 2025-06-18 092956.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+
         javax.swing.GroupLayout SideMenuLayout = new javax.swing.GroupLayout(SideMenu);
         SideMenu.setLayout(SideMenuLayout);
         SideMenuLayout.setHorizontalGroup(
@@ -117,13 +121,16 @@ public class SampleCard extends javax.swing.JFrame {
                     .addComponent(RecordButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(DoctorButton, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MedicineButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MedicineButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         SideMenuLayout.setVerticalGroup(
             SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideMenuLayout.createSequentialGroup()
-                .addGap(126, 126, 126)
+                .addGap(59, 59, 59)
+                .addComponent(jLabel4)
+                .addGap(42, 42, 42)
                 .addComponent(HomeButton)
                 .addGap(40, 40, 40)
                 .addComponent(RecordButton)
@@ -131,7 +138,7 @@ public class SampleCard extends javax.swing.JFrame {
                 .addComponent(MedicineButton)
                 .addGap(40, 40, 40)
                 .addComponent(DoctorButton)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         getContentPane().add(SideMenu, java.awt.BorderLayout.LINE_START);
@@ -569,6 +576,7 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
