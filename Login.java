@@ -8,6 +8,7 @@ package loginandsignup;
  *
  * @author macbook
  */
+import clinicandpharmacymanagement.view.MainDashboard; 
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -82,10 +83,10 @@ public class Login extends javax.swing.JFrame {
         });
 
         loginlabel.setFont(new java.awt.Font("Al Nile", 1, 36)); // NOI18N
-        loginlabel.setForeground(new java.awt.Color(57, 88, 134));
+        loginlabel.setForeground(new java.awt.Color(51, 153, 255));
         loginlabel.setText("Login");
 
-        LOGINBUTTON.setBackground(new java.awt.Color(57, 88, 134));
+        LOGINBUTTON.setBackground(new java.awt.Color(51, 153, 255));
         LOGINBUTTON.setForeground(new java.awt.Color(204, 204, 204));
         LOGINBUTTON.setText("LOGIN");
         LOGINBUTTON.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +97,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setText("Don't have an account?");
 
-        LOGINBUTTON1.setBackground(new java.awt.Color(57, 88, 134));
+        LOGINBUTTON1.setBackground(new java.awt.Color(51, 153, 255));
         LOGINBUTTON1.setForeground(new java.awt.Color(204, 204, 204));
         LOGINBUTTON1.setText("Sign Up?");
         LOGINBUTTON1.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +223,18 @@ public class Login extends javax.swing.JFrame {
 
     private void LOGINBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGINBUTTONActionPerformed
         // TODO add your handling code here:
+        String email = EmailText.getText().trim();
+    String password = new String(jPasswordField.getPassword()).trim();
+
+    if (email.isEmpty() || password.isEmpty()) {
+        // Show alert if either email or password is empty
+        javax.swing.JOptionPane.showMessageDialog(this, "Please enter both Email and Password.if not register then register");
+    } else{ 
+    MainDashboard dashboard = new MainDashboard();  // create dashboard instance
+    dashboard.setVisible(true);                    // show dashboard window
+    dashboard.pack();                              // adjust size
+    dashboard.setLocationRelativeTo(null);        // center on screen
+    this.dispose();  }
     }//GEN-LAST:event_LOGINBUTTONActionPerformed
 
     private void LOGINBUTTON1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGINBUTTON1ActionPerformed
