@@ -8,114 +8,52 @@ import clinicandpharmacymanagement.view.model.LoginRequest;
 import clinicandpharmacymanagement.view.model.ResetPasswordRequest;
 import clinicandpharmacymanagement.view.model.UserData;
 import java.util.List;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.*;
+
 
 /**
  *
  * @author AngkitKharel
  */
 public class UserDaoTest {
-
-    public UserDaoTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-        System.out.println("Setup class");
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-
-    }
-
-    @BeforeEach
-    public void setUp() {
-        System.out.println("Setup before each class");
-
-    }
-
-    @AfterEach
-    public void tearDown() {
-    }
-
-    /**
-     * Test of register method, of class UserDao.
-     */
+    String name="Angkit";
+    String email = "angkitkharel1234@gmail.com";
+    String password ="angkit123@";
+    String role="patient";
+    
     @Test
-    public void testRegister() {
-        System.out.println("register");
-        UserData user = null;
-        UserDao instance = new UserDao();
-        boolean expResult = false;
-        boolean result = instance.register(user);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void registerUser(){
+//        String name, String email, String password, String utype
+        UserData user = new UserData(name,email,password,role);
+        UserDao dao = new UserDao();
+        boolean result= dao.register(user);
+        Assert.assertTrue("Should register",result);
     }
-
-    /**
-     * Test of login method, of class UserDao.
-     */
+    
     @Test
-    public void testLogin() {
-        System.out.println("login");
-        LoginRequest loginReq = null;
-        UserDao instance = new UserDao();
-        UserData expResult = null;
-        UserData result = instance.login(loginReq);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void registerWithDuplicate(){
+        UserData user = new UserData(name,email,password,role);
+        UserDao dao = new UserDao();
+        boolean result= dao.register(user);
+        Assert.assertFalse("Register should fail for duplicate",result);
     }
-
-    /**
-     * Test of checkEmail method, of class UserDao.
-     */
+    
     @Test
-    public void testCheckEmail() {
-        System.out.println("checkEmail");
-        String email = "";
-        UserDao instance = new UserDao();
-        boolean expResult = false;
-        boolean result = instance.checkEmail(email);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void loginUser(){
+        LoginRequest req = new LoginRequest(email,password);
+        UserDao dao = new UserDao();
+        UserData user= dao.login(req);
+        Assert.assertNotNull("Login should retrieve user",user);
+        Assert.assertEquals("Name should match",name,user.getName());        
+        Assert.assertEquals("Email should match",email,user.getEmail());        
+        Assert.assertEquals("Password should match",password,user.getPassword());
     }
-
-    /**
-     * Test of resetPassword method, of class UserDao.
-     */
     @Test
-    public void testResetPassword() {
-        System.out.println("resetPassword");
-        ResetPasswordRequest reset = null;
-        UserDao instance = new UserDao();
-        boolean expResult = false;
-        boolean result = instance.resetPassword(reset);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void loginWithWrongCreds(){
+        LoginRequest req = new LoginRequest(email,"angfd");
+        UserDao dao = new UserDao();
+        UserData user= dao.login(req);
+        Assert.assertNull("Login should retrieve user",user);
     }
-
-    /**
-     * Test of getAllUsers method, of class UserDao.
-     */
-    @Test
-    public void testGetAllUsers() {
-        System.out.println("getAllUsers");
-        UserDao instance = new UserDao();
-        List<UserData> expResult = null;
-        List<UserData> result = instance.getAllUsers();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
 }
