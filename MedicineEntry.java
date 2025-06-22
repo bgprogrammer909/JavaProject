@@ -262,16 +262,7 @@ public class MedicineEntry extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        String name = nameTextField.getText().trim();
-String batch = batchTextField.getText().trim();
-String price = priceTextField.getText().trim();
-String quantity = quantityTextField.getText().trim();
-String expiryDate = expiryDateTextField.getText().trim();
 
-if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
-    javax.swing.JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
-} 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
