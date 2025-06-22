@@ -1,6 +1,8 @@
 
 package loginandsignup;
 
+import clinicandpharmacymanagement.view.MainDashboard;
+
 
 public class SignUp extends javax.swing.JFrame {
 
@@ -101,30 +103,31 @@ public class SignUp extends javax.swing.JFrame {
         Left.setLayout(LeftLayout);
         LeftLayout.setHorizontalGroup(
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftLayout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(Backbutton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LOGINBUTTON1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jctermsandconditions, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(EmailText2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addGap(290, 290, 290)
+                        .addComponent(Backbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addComponent(LOGINBUTTON1))
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jctermsandconditions, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel5)
-                                .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(loginlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(EmailText)
-                                        .addComponent(Password)
-                                        .addComponent(EmailText1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(EmailText2, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel5)
+                                        .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(loginlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(EmailText)
+                                                .addComponent(Password)
+                                                .addComponent(EmailText1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
                 .addGap(222, 222, 222))
         );
         LeftLayout.setVerticalGroup(
@@ -150,11 +153,15 @@ public class SignUp extends javax.swing.JFrame {
                 .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jctermsandconditions)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LOGINBUTTON1)
-                    .addComponent(Backbutton, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(36, 36, 36))
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addComponent(Backbutton)
+                        .addGap(81, 81, 81))
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(LOGINBUTTON1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -192,6 +199,14 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordFieldActionPerformed
 
     private void LOGINBUTTON1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGINBUTTON1ActionPerformed
+        String email = EmailText.getText().trim();
+    String password = new String(jPasswordField.getPassword()).trim();
+
+    if (email.isEmpty() || password.isEmpty()) {
+        // Show alert if either email or password is empty
+        javax.swing.JOptionPane.showMessageDialog(this, "Please enter your details .");
+            // center on screen
+    this.dispose();  }
         SignUp SignUpFrame = new SignUp();
         SignUpFrame.setVisible(true);
         SignUpFrame.pack();
