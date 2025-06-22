@@ -82,10 +82,10 @@ public class Login extends javax.swing.JFrame {
         });
 
         loginlabel.setFont(new java.awt.Font("Al Nile", 1, 36)); // NOI18N
-        loginlabel.setForeground(new java.awt.Color(57, 88, 134));
+        loginlabel.setForeground(new java.awt.Color(51, 153, 255));
         loginlabel.setText("Login");
 
-        LOGINBUTTON.setBackground(new java.awt.Color(57, 88, 134));
+        LOGINBUTTON.setBackground(new java.awt.Color(51, 153, 255));
         LOGINBUTTON.setForeground(new java.awt.Color(204, 204, 204));
         LOGINBUTTON.setText("LOGIN");
         LOGINBUTTON.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +96,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setText("Don't have an account?");
 
-        LOGINBUTTON1.setBackground(new java.awt.Color(57, 88, 134));
+        LOGINBUTTON1.setBackground(new java.awt.Color(51, 153, 255));
         LOGINBUTTON1.setForeground(new java.awt.Color(204, 204, 204));
         LOGINBUTTON1.setText("Sign Up?");
         LOGINBUTTON1.addActionListener(new java.awt.event.ActionListener() {
