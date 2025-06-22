@@ -280,20 +280,40 @@ public class MedicineEntry extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        String name = nameTextField.getText().trim();
-String batch = batchTextField.getText().trim();
-String price = priceTextField.getText().trim();
-String quantity = quantityTextField.getText().trim();
-String expiryDate = expiryDateTextField.getText().trim();
+        {   
+  String name = nameTextField.getText().trim();
+    String batch = batchTextField.getText().trim();
+    String price = priceTextField.getText().trim();
+    String quantity = quantityTextField.getText().trim();
+    String expiryDate = expiryDateTextField.getText().trim();
 
-if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
-    javax.swing.JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
-} 
+    // Validation
+    if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
+        return;
+    }
+
+    // Add row to jTable1
+    javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+    int id = model.getRowCount() + 1; // Auto-increment ID
+
+    model.addRow(new Object[] {id, name, batch, quantity, expiryDate});
+
+    // Show success message
+    jLabel8.setText("Medicine added successfully!");
+
+    // Optional: Clear the fields after saving
+    nameTextField.setText("");
+    batchTextField.setText("");
+    priceTextField.setText("");
+    quantityTextField.setText("");
+    expiryDateTextField.setText("");
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
+        
         {
           MainDashboard dashboard = new MainDashboard();  
     dashboard.setVisible(true);                    
