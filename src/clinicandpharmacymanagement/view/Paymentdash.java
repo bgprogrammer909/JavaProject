@@ -168,7 +168,29 @@ public class Paymentdash extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+  double total = 0.0;
 
+    for (int i = 0; i < jTable1.getRowCount(); i++) {
+        Object qtyObj = jTable1.getValueAt(i, 1);
+        Object costObj = jTable1.getValueAt(i, 2);
+
+        if (qtyObj == null || costObj == null) continue;
+
+        String qtyStr = qtyObj.toString().trim();
+        String costStr = costObj.toString().trim();
+
+        try {
+            int quantity = Integer.parseInt(qtyStr);
+            double cost = Double.parseDouble(costStr);
+            total += quantity * cost;
+        } catch (NumberFormatException e) {
+            // You can show a warning if needed:
+            // JOptionPane.showMessageDialog(this, "Invalid entry in row " + (i + 1));
+            System.out.println("Invalid number at row " + (i + 1));
+        }
+    }
+
+    jTextField2.setText(String.format("%.2f", total));
                                         
  
 
@@ -176,11 +198,61 @@ public class Paymentdash extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      
+  // Check if MainDashboard exists in your project
+    try {
+        MainDashboard main = new MainDashboard();
+        main.setVisible(true);  // Open MainDashboard window
+        this.dispose();         // Close the current Paymentdash window
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "MainDashboard not found or failed to load.", "Navigation Error", JOptionPane.ERROR_MESSAGE);
+        e.printStackTrace();
+    }      
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+ String patientId = jTextField1.getText().trim();
 
+    // ✅ Check if Patient ID field is empty
+    if (patientId.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Patient ID box is empty. Please enter the Patient ID.", "Empty Field", JOptionPane.WARNING_MESSAGE);
+        return; // Stop further execution
+    }
+
+    StringBuilder bill = new StringBuilder();
+    bill.append("------- Hospital Bill -------\n");
+    bill.append("Patient ID: ").append(patientId).append("\n\n");
+    bill.append(String.format("%-20s%-10s%-10s\n", "Service", "Qty", "Cost"));
+
+    double total = 0.0;
+
+    for (int i = 0; i < jTable1.getRowCount(); i++) {
+        Object serviceObj = jTable1.getValueAt(i, 0);
+        Object qtyObj = jTable1.getValueAt(i, 1);
+        Object costObj = jTable1.getValueAt(i, 2);
+
+        if (serviceObj == null || qtyObj == null || costObj == null) continue;
+
+        String service = serviceObj.toString();
+        String qtyStr = qtyObj.toString();
+        String costStr = costObj.toString();
+
+        try {
+            int qty = Integer.parseInt(qtyStr);
+            double cost = Double.parseDouble(costStr);
+            if (qty > 0) {
+                bill.append(String.format("%-20s%-10d%-10.2f\n", service, qty, cost));
+                total += qty * cost;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid entry at row " + (i + 1));
+        }
+    }
+
+    bill.append("\n----------------------------\n");
+    bill.append(String.format("Total Amount: %.2f", total));
+
+    // Show the bill
+    JOptionPane.showMessageDialog(this, bill.toString(), "Generated Bill", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
