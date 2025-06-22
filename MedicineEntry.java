@@ -60,7 +60,7 @@ public class MedicineEntry extends javax.swing.JFrame {
 
         jLabel2.setText("Name:");
 
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setText("Medicine Entry");
 
         jLabel4.setText("Batch:");
@@ -189,7 +189,7 @@ public class MedicineEntry extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setText("Search Medicine");
 
         jTextField1.setText("Search by name or category");
@@ -227,7 +227,7 @@ public class MedicineEntry extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -262,7 +262,16 @@ public class MedicineEntry extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        String name = nameTextField.getText().trim();
+String batch = batchTextField.getText().trim();
+String price = priceTextField.getText().trim();
+String quantity = quantityTextField.getText().trim();
+String expiryDate = expiryDateTextField.getText().trim();
 
+if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
+} 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -271,7 +280,7 @@ public class MedicineEntry extends javax.swing.JFrame {
           MainDashboard dashboard = new MainDashboard();  // create dashboard instance
     dashboard.setVisible(true);                    // show dashboard window
     dashboard.pack();                              // adjust size
-    dashboard.setLocationRelativeTo(null);        // center on screen
+    dashboard.setLocationRelativeTo(null);        // center on 
     this.dispose();  }
     }//GEN-LAST:event_jButton2ActionPerformed
 
