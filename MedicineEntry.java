@@ -49,7 +49,7 @@ public class MedicineEntry extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Searchbutton = new javax.swing.JButton();
         SearchText = new javax.swing.JTextField();
-
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -200,7 +200,6 @@ public class MedicineEntry extends javax.swing.JFrame {
         Searchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchbuttonActionPerformed(evt);
-
             }
         });
 
@@ -224,7 +223,17 @@ public class MedicineEntry extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(163, 163, 163)
+                                        .addComponent(Searchbutton))
+                                    .addComponent(SearchText, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -238,7 +247,9 @@ public class MedicineEntry extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SearchText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Searchbutton)
+                            .addComponent(jLabel9))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -269,16 +280,35 @@ public class MedicineEntry extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        String name = nameTextField.getText().trim();
-String batch = batchTextField.getText().trim();
-String price = priceTextField.getText().trim();
-String quantity = quantityTextField.getText().trim();
-String expiryDate = expiryDateTextField.getText().trim();
+        {   
+  String name = nameTextField.getText().trim();
+    String batch = batchTextField.getText().trim();
+    String price = priceTextField.getText().trim();
+    String quantity = quantityTextField.getText().trim();
+    String expiryDate = expiryDateTextField.getText().trim();
 
-if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
-    javax.swing.JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
-} 
+    // Validation
+    if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
+        return;
+    }
+
+    // Add row to jTable1
+    javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+    int id = model.getRowCount() + 1; // Auto-increment ID
+
+    model.addRow(new Object[] {id, name, batch, quantity, expiryDate});
+
+    // Show success message
+    jLabel8.setText("Medicine added successfully!");
+
+    // Optional: Clear the fields after saving
+    nameTextField.setText("");
+    batchTextField.setText("");
+    priceTextField.setText("");
+    quantityTextField.setText("");
+    expiryDateTextField.setText("");
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -325,7 +355,7 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     }//GEN-LAST:event_SearchbuttonActionPerformed
 
     private void SearchTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchTextActionPerformed
-        // TODO add your handling code here:
+        
         
     }//GEN-LAST:event_SearchTextActionPerformed
 
