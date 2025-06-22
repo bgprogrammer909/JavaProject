@@ -1,7 +1,10 @@
 package clinicandpharmacymanagement.view;
 
 
-import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import javax.swing.JCheckBox;
+import javax.swing.JPasswordField;
+import javax.swing.JTextPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -42,14 +45,14 @@ public class Registration extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtname = new javax.swing.JTextPane();
+        regName = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jemail = new javax.swing.JTextPane();
+        regMail = new javax.swing.JTextPane();
         jLabel4 = new javax.swing.JLabel();
-        jpassword = new javax.swing.JPasswordField();
-        bsignup = new javax.swing.JButton();
+        registerBtn = new javax.swing.JButton();
         jcshow = new javax.swing.JCheckBox();
         jctermsandconditions = new javax.swing.JCheckBox();
+        regPassword = new javax.swing.JPasswordField();
 
         jMenu1.setText("jMenu1");
 
@@ -89,47 +92,37 @@ public class Registration extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel3.setText("E-mail/Phone");
+        jLabel3.setText("E-mail");
 
-        jScrollPane1.setViewportView(jtname);
+        jScrollPane1.setViewportView(regName);
 
-        jScrollPane2.setViewportView(jemail);
+        jScrollPane2.setViewportView(regMail);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 0));
         jLabel4.setText("Password");
 
-        jpassword.addActionListener(new java.awt.event.ActionListener() {
+        registerBtn.setBackground(new java.awt.Color(0, 102, 0));
+        registerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        registerBtn.setForeground(new java.awt.Color(255, 255, 255));
+        registerBtn.setText("Sign Up");
+        registerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jpasswordActionPerformed(evt);
-            }
-        });
-
-        bsignup.setBackground(new java.awt.Color(0, 102, 0));
-        bsignup.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bsignup.setForeground(new java.awt.Color(255, 255, 255));
-        bsignup.setText("Sign Up");
-        bsignup.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bsignupActionPerformed(evt);
+                registerBtnActionPerformed(evt);
             }
         });
 
         jcshow.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jcshow.setForeground(new java.awt.Color(0, 102, 0));
         jcshow.setText("Show");
-        jcshow.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcshowActionPerformed(evt);
-            }
-        });
 
         jctermsandconditions.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jctermsandconditions.setForeground(new java.awt.Color(0, 102, 0));
         jctermsandconditions.setText("I agree to all terms and conditions");
-        jctermsandconditions.addActionListener(new java.awt.event.ActionListener() {
+
+        regPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jctermsandconditionsActionPerformed(evt);
+                regPasswordActionPerformed(evt);
             }
         });
 
@@ -146,19 +139,18 @@ public class Registration extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                            .addComponent(regPassword))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jcshow, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jctermsandconditions, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(38, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bsignup)
+                .addComponent(registerBtn)
                 .addGap(166, 166, 166))
         );
         jPanel1Layout.setVerticalGroup(
@@ -178,13 +170,13 @@ public class Registration extends javax.swing.JFrame {
                         .addComponent(jLabel3)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jcshow)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(regPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jctermsandconditions)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bsignup)
+                .addComponent(registerBtn)
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
@@ -206,76 +198,30 @@ public class Registration extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsignupActionPerformed
+    private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
         // TODO add your handling code here:
-        if (jtname.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Please fill out name");
-        }
-        else if(jemail.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Please fill out email");
-        }
-        else if(jpassword.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Please fill out password ");
+//        if (regName.getText().equals("")){
+//            JOptionPane.showMessageDialog(null,"Please fill out name");
+//        }
+//        else if(regMail.getText().equals("")){
+//            JOptionPane.showMessageDialog(null,"Please fill out email");
+//        }
+//        else if(regPassword.getText().equals("")){
+//            JOptionPane.showMessageDialog(null,"Please fill out password ");
             
-        }
-    }//GEN-LAST:event_bsignupActionPerformed
-
-    private void jcshowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcshowActionPerformed
-        // TODO add your handling code here:
-        if (jcshow.isSelected()){
-            jpassword.setEchoChar((char)0);   
-        }
-        else{
-            jpassword.setEchoChar('*');
-        }
         
-    }//GEN-LAST:event_jcshowActionPerformed
+    }//GEN-LAST:event_registerBtnActionPerformed
 
-    private void jctermsandconditionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jctermsandconditionsActionPerformed
+    private void regPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jctermsandconditionsActionPerformed
-
-    private void jpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jpasswordActionPerformed
+    }//GEN-LAST:event_regPasswordActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Registration().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bsignup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -292,8 +238,34 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JCheckBox jcshow;
     private javax.swing.JCheckBox jctermsandconditions;
-    private javax.swing.JTextPane jemail;
-    private javax.swing.JPasswordField jpassword;
-    private javax.swing.JTextPane jtname;
+    private javax.swing.JTextPane regMail;
+    private javax.swing.JTextPane regName;
+    private javax.swing.JPasswordField regPassword;
+    private javax.swing.JButton registerBtn;
     // End of variables declaration//GEN-END:variables
+
+    public JTextPane getEmailTextField() {
+        return regMail;
+    }
+
+    public JTextPane getNameTextField() {
+        return regName;
+    }
+    public JCheckBox getCheckBox() {
+        return jcshow;
+    }
+
+    public JPasswordField getPasswordField() {
+        return regPassword;
+    }
+    
+    public void register(ActionListener listener){
+        registerBtn.addActionListener(listener);
+    }
+    public void showPassword(ActionListener listener){
+        jcshow.addActionListener(listener);
+    }           
+
+   
+
 }

@@ -4,6 +4,9 @@
  */
 package clinicandpharmacymanagement;
 
+import clinicandpharmacymanagement.controller.HomepageController;
+import clinicandpharmacymanagement.view.HomePage;
+
 /**
  *
  * @author ACER
@@ -14,7 +17,9 @@ public class ClinicAndPharmacyManagement {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        HomePage home=new HomePage();
+        HomepageController hcon=new HomepageController(home);
+        hcon.open();
     }
     
 }

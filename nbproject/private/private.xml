@@ -1,15 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/clinicandpharmacymanagement/Dao/Patientdao.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>37</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/clinicandpharmacymanagement/view/MainDashboard.java</file>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/clinicandpharmacymanagement/view/Registration.java</file>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/clinicandpharmacymanagement/view/Paymentdash.java</file>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/paymentdash.java</file>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/Paymentdash_1.java</file>
-            <file>file:/C:/Users/acer/OneDrive/Desktop/pharma&amp;clini/JavaProject/src/clinicandpharmacymanagement/ClinicAndPharmacyManagement.java</file>
+<<<<<<< Updated upstream
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/ResetView.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/AdminController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/AdminDashboardPharma.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/LoginController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/Doctordao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/DoctorModel.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/sampletabs.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/HomePage.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/StaffController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/ClinicAndPharmacyManagement.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/UserData.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/UserCountDao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/SampleCard.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/InfoDetail.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/InfoDetailController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/HomepageController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/PrescriptionController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/controller/PatientDashboardController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/appointmentbookin.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/BookAppointment.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/Appointmentdao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/AppointmentModel.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/StaffDash.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/ViewAppointment.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/PrescriptionModel.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/PrescriptionsDao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/Patientdao.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/Paymentdash.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/view/model/MedicineModel.java</file>
+            <file>file:/C:/Users/ACER/Desktop/javaproject/JavaProject/src/clinicandpharmacymanagement/Dao/Medicinedao.java</file>
+=======
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/UserDao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/LoginView.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/MainDashboard.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/PatientDashboard.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/Registration.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/ResetView.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/HomePage.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Medicinedao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/MedicineModel.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Database/MysqlConnection.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/UserData.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/DoctorModel.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Database/Dbconnection.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/controller/AdminController.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/controller/LoginController.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/controller/RegisterController.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Doctordao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Patientdao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/PatientModel.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/Billingdao.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/Dao/BillingModel.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/BillingModel.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/AdminDashboardPharma1.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/AddDashboard.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/LoginRequest.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/test/clinicandpharmacymanagement/view/AddDashboardTest.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/src/clinicandpharmacymanagement/view/model/ResetPasswordRequest.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/test/clinicandpharmacymanagement/Dao/UserDaoTest.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/test/clinicandpharmacymanagement/Dao/DoctordaoTest.java</file>
+            <file>file:/C:/Users/AngkitKharel/Desktop/project/test/clinicandpharmacymanagement/Dao/MedicinedaoTest.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
