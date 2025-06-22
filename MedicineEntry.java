@@ -277,10 +277,10 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         {
-          MainDashboard dashboard = new MainDashboard();  // create dashboard instance
-    dashboard.setVisible(true);                    // show dashboard window
-    dashboard.pack();                              // adjust size
-    dashboard.setLocationRelativeTo(null);        // center on 
+          MainDashboard dashboard = new MainDashboard();  
+    dashboard.setVisible(true);                    
+    dashboard.pack();                              
+    dashboard.setLocationRelativeTo(null);        
     this.dispose();  }
     }//GEN-LAST:event_jButton2ActionPerformed
 
