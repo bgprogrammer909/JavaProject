@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package loginandsignup;
+import javax.swing.JOptionPane;
 
 import clinicandpharmacymanagement.view.MainDashboard;
 
@@ -46,7 +47,9 @@ public class MedicineEntry extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Searchbutton = new javax.swing.JButton();
+        SearchText = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -192,12 +195,21 @@ public class MedicineEntry extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setText("Search Medicine");
 
-        jTextField1.setText("Search by name or category");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Searchbutton.setBackground(new java.awt.Color(51, 153, 255));
+        Searchbutton.setText("Search");
+        Searchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                SearchbuttonActionPerformed(evt);
             }
         });
+
+        SearchText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchTextActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("Search by name or category");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -208,14 +220,20 @@ public class MedicineEntry extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(163, 163, 163)
+                                        .addComponent(Searchbutton))
+                                    .addComponent(SearchText, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -227,18 +245,18 @@ public class MedicineEntry extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
+                        .addComponent(SearchText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Searchbutton)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
         // TODO add your handling code here:
@@ -284,6 +302,44 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     this.dispose();  }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void SearchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchbuttonActionPerformed
+        // TODO add your handling code here:
+         String searchText = SearchText.getText().trim().toLowerCase();
+    
+    if (searchText.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter a medicine name to search.");
+        return;
+    }
+
+    boolean found = false;
+    int rowCount = jTable1.getRowCount();
+
+    for (int i = 0; i < rowCount; i++) {
+        Object value = jTable1.getValueAt(i, 1); // Column 1 = "Name"
+
+        if (value != null && value.toString().toLowerCase().contains(searchText)) {
+            found = true;
+
+            // Select and scroll to the row in the table
+            jTable1.setRowSelectionInterval(i, i);
+            jTable1.scrollRectToVisible(jTable1.getCellRect(i, 0, true));
+
+            JOptionPane.showMessageDialog(this, "Medicine found at row " + (i + 1));
+            break;
+        }
+    }
+
+    if (!found) {
+        JOptionPane.showMessageDialog(this, "Medicine not found.");
+    }
+
+    }//GEN-LAST:event_SearchbuttonActionPerformed
+
+    private void SearchTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchTextActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_SearchTextActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -320,6 +376,8 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField SearchText;
+    private javax.swing.JButton Searchbutton;
     private javax.swing.JTextField batchTextField;
     private javax.swing.JTextField expiryDateTextField;
     private javax.swing.JButton jButton1;
@@ -332,10 +390,10 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField priceTextField;
     private javax.swing.JTextField quantityTextField;
