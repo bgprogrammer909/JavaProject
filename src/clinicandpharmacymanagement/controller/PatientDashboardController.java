@@ -295,6 +295,9 @@ class Appoint implements ActionListener {
         }
         
     }
+    private void showErrorMessage(String message) {
+        JOptionPane.showMessageDialog(view, message, "Error", JOptionPane.ERROR_MESSAGE);
+    }
     public void open(){
         view.setVisible(true);
     }

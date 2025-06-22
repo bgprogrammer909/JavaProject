@@ -755,7 +755,7 @@ public class SampleCard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public JTable getjTable1() {
-        return PrescriptionTable;
+        return medTable;
     }
     public void editIt(ActionListener listener){
         edit.addActionListener(listener);

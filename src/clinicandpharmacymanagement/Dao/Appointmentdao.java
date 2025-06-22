@@ -157,7 +157,7 @@ public List<ViewAppointment> getAppointmentsByUserId(String userId) {
 
         return appointments;
     }
-}
+
 
   
 }
