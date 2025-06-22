@@ -258,21 +258,36 @@ public class StaffDash extends javax.swing.JFrame {
 
         parent.setLayout(new java.awt.CardLayout());
 
+        Home.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(98, 138, 203));
         jLabel1.setText("WELCOME TO STAFF DASHBOARD");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(98, 138, 203));
         jLabel7.setText("Total number of patients");
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(98, 138, 203));
         jLabel8.setText("Total number of Doctors");
 
+        totalpatients.setForeground(new java.awt.Color(98, 138, 203));
         totalpatients.setText("20");
 
+        totaldoctors.setForeground(new java.awt.Color(98, 138, 203));
         totaldoctors.setText("70");
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(98, 138, 203));
         jLabel11.setText("Todays TO-DO LIST");
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(98, 138, 203));
         jLabel15.setText("Add the patients ");
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(98, 138, 203));
         jLabel16.setText("Appoint the doctors");
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
@@ -283,22 +298,19 @@ public class StaffDash extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HomeLayout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(HomeLayout.createSequentialGroup()
+                        .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addGap(38, 38, 38)
                         .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(HomeLayout.createSequentialGroup()
-                                .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel16))
-                                .addGap(38, 38, 38)
-                                .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox1)
-                                    .addComponent(jCheckBox2))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(126, 126, 126))
+                            .addComponent(jCheckBox1)
+                            .addComponent(jCheckBox2))))
+                .addGap(99, 99, 99))
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(92, 92, 92)
                 .addComponent(totalpatients, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -308,7 +320,7 @@ public class StaffDash extends javax.swing.JFrame {
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(233, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,7 +345,7 @@ public class StaffDash extends javax.swing.JFrame {
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(jCheckBox2))
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(184, Short.MAX_VALUE))
         );
 
         parent.add(Home, "card2");
