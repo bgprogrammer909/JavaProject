@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 public class Paymentdash extends javax.swing.JFrame {
 
     /**
-     * Creates new form Paymentdash
+     * Creates new form 
      */
     public Paymentdash() {
         initComponents();
