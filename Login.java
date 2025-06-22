@@ -226,18 +226,30 @@ public class Login extends javax.swing.JFrame {
 
     private void LOGINBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGINBUTTONActionPerformed
         // TODO add your handling code here:
-        String email = EmailText.getText().trim();
-    String password = new String(jPasswordField.getPassword()).trim();
+        {
+      String emailInput = EmailText.getText().trim();
+    String passwordInput = new String(jPasswordField.getPassword()).trim();
 
-    if (email.isEmpty() || password.isEmpty()) {
-        // Show alert if either email or password is empty
-        javax.swing.JOptionPane.showMessageDialog(this, "Please enter both Email and Password.if not register then register");
-    } else{ 
-    MainDashboard dashboard = new MainDashboard();  // create dashboard instance
-    dashboard.setVisible(true);                    // show dashboard window
-    dashboard.pack();                              // adjust size
-    dashboard.setLocationRelativeTo(null);        // center on screen
-    this.dispose();  }
+    // Sample hardcoded user data (Replace this with DB or file check)
+    String registeredEmail = "admin@example.com";
+    String registeredPassword = "admin123";
+
+    if (emailInput.isEmpty() || passwordInput.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Please enter both Email and Password.");
+        return;
+    }
+
+    if (emailInput.equals(registeredEmail) && passwordInput.equals(registeredPassword)) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Login successful!");
+        MainDashboard dashboard = new MainDashboard();
+        dashboard.setVisible(true);
+        dashboard.pack();
+        dashboard.setLocationRelativeTo(null);
+        this.dispose();
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Invalid email or password.");
+    }
+}
     }//GEN-LAST:event_LOGINBUTTONActionPerformed
 
     private void LOGINBUTTON1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGINBUTTON1ActionPerformed

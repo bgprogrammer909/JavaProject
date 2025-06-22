@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package loginandsignup;
+import javax.swing.JOptionPane;
 
 import clinicandpharmacymanagement.view.MainDashboard;
 
@@ -46,7 +47,10 @@ public class MedicineEntry extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Searchbutton = new javax.swing.JButton();
+        SearchText = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,7 +64,7 @@ public class MedicineEntry extends javax.swing.JFrame {
 
         jLabel2.setText("Name:");
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel3.setText("Medicine Entry");
 
         jLabel4.setText("Batch:");
@@ -105,7 +109,7 @@ public class MedicineEntry extends javax.swing.JFrame {
 
         jLabel8.setText("Medicine added successfuly ");
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +176,7 @@ public class MedicineEntry extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         jTable1.setBackground(new java.awt.Color(213, 222, 238));
@@ -189,13 +193,30 @@ public class MedicineEntry extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel1.setText("Search Medicine");
 
-        jTextField1.setText("Search by name or category");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Searchbutton.setBackground(new java.awt.Color(51, 153, 255));
+        Searchbutton.setText("Search");
+        Searchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                SearchbuttonActionPerformed(evt);
+            }
+        });
+
+        SearchText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchTextActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("Search by name or category");
+
+        delete.setBackground(new java.awt.Color(204, 0, 0));
+        delete.setText("Delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
             }
         });
 
@@ -208,15 +229,7 @@ public class MedicineEntry extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,18 +240,17 @@ public class MedicineEntry extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(SearchText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Searchbutton)
+                            .addComponent(jLabel9))
+
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
         // TODO add your handling code here:
@@ -262,20 +274,40 @@ public class MedicineEntry extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        String name = nameTextField.getText().trim();
-String batch = batchTextField.getText().trim();
-String price = priceTextField.getText().trim();
-String quantity = quantityTextField.getText().trim();
-String expiryDate = expiryDateTextField.getText().trim();
+        {   
+  String name = nameTextField.getText().trim();
+    String batch = batchTextField.getText().trim();
+    String price = priceTextField.getText().trim();
+    String quantity = quantityTextField.getText().trim();
+    String expiryDate = expiryDateTextField.getText().trim();
 
-if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
-    javax.swing.JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
-} 
+    // Validation
+    if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() || expiryDate.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all the fields: Name, Batch, Price, Quantity, and Expiry Date.");
+        return;
+    }
+
+    // Add row to jTable1
+    javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+    int id = model.getRowCount() + 1; // Auto-increment ID
+
+    model.addRow(new Object[] {id, name, batch, quantity, expiryDate});
+
+    // Show success message
+    jLabel8.setText("Medicine added successfully!");
+
+    // Optional: Clear the fields after saving
+    nameTextField.setText("");
+    batchTextField.setText("");
+    priceTextField.setText("");
+    quantityTextField.setText("");
+    expiryDateTextField.setText("");
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
+        
         {
           MainDashboard dashboard = new MainDashboard();  
     dashboard.setVisible(true);                    
@@ -283,6 +315,63 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     dashboard.setLocationRelativeTo(null);        
     this.dispose();  }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void SearchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchbuttonActionPerformed
+        // TODO add your handling code here:
+         String searchText = SearchText.getText().trim().toLowerCase();
+    
+    if (searchText.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter a medicine name to search.");
+        return;
+    }
+
+    boolean found = false;
+    int rowCount = jTable1.getRowCount();
+
+    for (int i = 0; i < rowCount; i++) {
+        Object value = jTable1.getValueAt(i, 1); // Column 1 = "Name"
+
+        if (value != null && value.toString().toLowerCase().contains(searchText)) {
+            found = true;
+
+            // Select and scroll to the row in the table
+            jTable1.setRowSelectionInterval(i, i);
+            jTable1.scrollRectToVisible(jTable1.getCellRect(i, 0, true));
+
+            JOptionPane.showMessageDialog(this, "Medicine found at row " + (i + 1));
+            break;
+        }
+    }
+
+    if (!found) {
+        JOptionPane.showMessageDialog(this, "Medicine not found.");
+    }
+
+    }//GEN-LAST:event_SearchbuttonActionPerformed
+
+    private void SearchTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchTextActionPerformed
+        
+        
+    }//GEN-LAST:event_SearchTextActionPerformed
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+        {
+        int selectedRow = jTable1.getSelectedRow();
+
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Please select a row to delete.");
+        return;
+    }
+
+    int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this medicine?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+        model.removeRow(selectedRow);
+        JOptionPane.showMessageDialog(this, "Medicine deleted successfully.");
+    }
+}
+    }//GEN-LAST:event_deleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,7 +409,10 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField SearchText;
+    private javax.swing.JButton Searchbutton;
     private javax.swing.JTextField batchTextField;
+    private javax.swing.JButton delete;
     private javax.swing.JTextField expiryDateTextField;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -332,10 +424,10 @@ if (name.isEmpty() || batch.isEmpty() || price.isEmpty() || quantity.isEmpty() |
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField priceTextField;
     private javax.swing.JTextField quantityTextField;
