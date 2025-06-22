@@ -9,51 +9,53 @@ package clinicandpharmacymanagement.view.model;
  * @author user
  */
 public class AppointmentModel {
-    private String id;
-    private String appointment;
-    private String patient;
-    private String doctor;
+    
+    private int id;
+    private int patientId;
+    private int doctorId;
+    private String timeSlot;
+    private String status;
 
-    public AppointmentModel(String id, String appointment, String patient, String doctor) {
-        this.id = id;
-        this.appointment = appointment;
-        this.patient = patient;
-        this.doctor = doctor;
-    }
+    // Getters & Setters
 
-    // Getters
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public String getAppointment() {
-        return appointment;
-    }
-
-    public String getPatient() {
-        return patient;
-    }
-
-    public String getDoctor() {
-        return doctor;
-    }
-
-    // Setters (if needed)
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public void setAppointment(String appointment) {
-        this.appointment = appointment;
+    public int getPatientId() {
+        return patientId;
     }
 
-    public void setPatient(String patient) {
-        this.patient = patient;
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
-    public void setDoctor(String doctor) {
-        this.doctor = doctor;
+    public int getDoctorId() {
+        return doctorId;
     }
-}
+
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
+    }
+
+    public String getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(String timeSlot) {
+        this.timeSlot = timeSlot;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
     
-
+   }

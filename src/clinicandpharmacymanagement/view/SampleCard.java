@@ -4,7 +4,10 @@
  */
 package clinicandpharmacymanagement.view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -33,38 +36,49 @@ public class SampleCard extends javax.swing.JFrame {
         HomeButton = new javax.swing.JButton();
         DoctorButton = new javax.swing.JButton();
         RecordButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        myAppointments = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         Home = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        welcome = new javax.swing.JLabel();
         MyRecords = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
+        hello = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        edit = new javax.swing.JButton();
+        name = new javax.swing.JLabel();
+        bloodtype = new javax.swing.JLabel();
+        age = new javax.swing.JLabel();
+        gender = new javax.swing.JLabel();
+        id = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         Medicine = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        PrescriptionTable = new javax.swing.JTable();
+        medTable = new javax.swing.JTable();
+        all = new javax.swing.JButton();
+        latest = new javax.swing.JButton();
         Doctor = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        DoctorTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         YesButton = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        DocTable = new javax.swing.JTable();
+        refreshDoc = new javax.swing.JButton();
+        ViewMyAppointments = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        appoint = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         SideMenu.setBackground(new java.awt.Color(57, 88, 134));
 
@@ -108,37 +122,52 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Screenshot 2025-06-18 092956.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
+        myAppointments.setBackground(new java.awt.Color(138, 174, 224));
+        myAppointments.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        myAppointments.setForeground(new java.awt.Color(255, 255, 255));
+        myAppointments.setText("My Appointment");
+        myAppointments.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                myAppointmentsMouseClicked(evt);
+            }
+        });
+        myAppointments.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myAppointmentsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout SideMenuLayout = new javax.swing.GroupLayout(SideMenu);
         SideMenu.setLayout(SideMenuLayout);
         SideMenuLayout.setHorizontalGroup(
             SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideMenuLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(RecordButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DoctorButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MedicineButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RecordButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MedicineButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(myAppointments, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(DoctorButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(SideMenuLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SideMenuLayout.setVerticalGroup(
             SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideMenuLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jLabel4)
-                .addGap(42, 42, 42)
+                .addGap(160, 160, 160)
                 .addComponent(HomeButton)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(RecordButton)
-                .addGap(40, 40, 40)
+                .addGap(28, 28, 28)
                 .addComponent(MedicineButton)
-                .addGap(40, 40, 40)
+                .addGap(26, 26, 26)
                 .addComponent(DoctorButton)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(myAppointments)
+                .addContainerGap(261, Short.MAX_VALUE))
         );
 
         getContentPane().add(SideMenu, java.awt.BorderLayout.LINE_START);
@@ -150,9 +179,9 @@ public class SampleCard extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel1.setText("Welcome Shrijan !!!");
+        welcome.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        welcome.setForeground(new java.awt.Color(98, 138, 203));
+        welcome.setText("Welcome !!!");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -160,14 +189,14 @@ public class SampleCard extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addContainerGap(97, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel1)
+                .addComponent(welcome)
                 .addContainerGap(360, Short.MAX_VALUE))
         );
 
@@ -178,14 +207,14 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         jPanel1.add(Home, "card2");
@@ -194,9 +223,9 @@ public class SampleCard extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel9.setText("Hello Shrijan Maharjan");
+        hello.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        hello.setForeground(new java.awt.Color(98, 138, 203));
+        hello.setText("Hello Shrijan Maharjan");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(98, 138, 203));
@@ -218,31 +247,39 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(98, 138, 203));
         jLabel14.setText("Blood Group:");
 
-        jButton4.setBackground(new java.awt.Color(138, 174, 224));
-        jButton4.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Edit");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        edit.setBackground(new java.awt.Color(138, 174, 224));
+        edit.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        edit.setForeground(new java.awt.Color(255, 255, 255));
+        edit.setText("Edit");
+        edit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                editActionPerformed(evt);
             }
         });
 
+        name.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        name.setForeground(new java.awt.Color(98, 138, 203));
+        name.setText("Shrijan Maharjan");
+
+        bloodtype.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        bloodtype.setForeground(new java.awt.Color(98, 138, 203));
+        bloodtype.setText("O+");
+
+        age.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        age.setForeground(new java.awt.Color(98, 138, 203));
+        age.setText("19");
+
+        gender.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        gender.setForeground(new java.awt.Color(98, 138, 203));
+        gender.setText("Male");
+
+        id.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        id.setForeground(new java.awt.Color(98, 138, 203));
+        id.setText("0000");
+
         jLabel15.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel15.setText("Shrijan Maharjan");
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel16.setText("O+");
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel17.setText("19");
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(98, 138, 203));
-        jLabel18.setText("Male");
+        jLabel15.setText("ID:");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -254,7 +291,7 @@ public class SampleCard extends javax.swing.JFrame {
                         .addGap(118, 118, 118)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(hello, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -265,42 +302,48 @@ public class SampleCard extends javax.swing.JFrame {
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel12))))
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                                .addComponent(id, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE))
+                            .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bloodtype, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jLabel9)
+                .addComponent(hello)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10)
-                .addGap(94, 94, 94)
+                .addGap(71, 71, 71)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(id))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel15))
+                    .addComponent(name))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jLabel17))
+                    .addComponent(age))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jLabel16))
+                    .addComponent(bloodtype))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jLabel18))
+                    .addComponent(gender))
                 .addGap(46, 46, 46)
-                .addComponent(jButton4)
+                .addComponent(edit)
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -309,7 +352,7 @@ public class SampleCard extends javax.swing.JFrame {
         MyRecordsLayout.setHorizontalGroup(
             MyRecordsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MyRecordsLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -318,7 +361,7 @@ public class SampleCard extends javax.swing.JFrame {
             .addGroup(MyRecordsLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         jPanel1.add(MyRecords, "card2");
@@ -331,18 +374,22 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(98, 138, 203));
         jLabel7.setText("Here are the prescriptions for your medication:");
 
-        PrescriptionTable.setModel(new javax.swing.table.DefaultTableModel(
+        medTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Time", "Description", "Medicine", "Dosage"
+                "Prescription ID", "Morning", "Day", "Night", "Date"
             }
         ));
-        jScrollPane1.setViewportView(PrescriptionTable);
+        jScrollPane1.setViewportView(medTable);
+
+        all.setText("ALL RECORDS");
+
+        latest.setText("LATEST");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -350,37 +397,48 @@ public class SampleCard extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(latest)
+                .addGap(18, 18, 18)
+                .addComponent(all)
+                .addGap(69, 69, 69))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(latest)
+                    .addComponent(all))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout MedicineLayout = new javax.swing.GroupLayout(Medicine);
         Medicine.setLayout(MedicineLayout);
         MedicineLayout.setHorizontalGroup(
             MedicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicineLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+            .addGroup(MedicineLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         MedicineLayout.setVerticalGroup(
             MedicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicineLayout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+            .addGroup(MedicineLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(Medicine, "card2");
@@ -393,19 +451,6 @@ public class SampleCard extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(98, 138, 203));
         jLabel8.setText("Here are details about the doctors:");
-
-        DoctorTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Name", "Speciality", "Available at"
-            }
-        ));
-        jScrollPane2.setViewportView(DoctorTable);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(98, 138, 203));
@@ -421,32 +466,65 @@ public class SampleCard extends javax.swing.JFrame {
             }
         });
 
+        DocTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Email", "Speciality", "Phone", "From", "To"
+            }
+        ));
+        jScrollPane3.setViewportView(DocTable);
+
+        refreshDoc.setText("Refresh");
+        refreshDoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshDocActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(YesButton)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(YesButton)))
+                        .addGap(0, 148, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel10Layout.createSequentialGroup()
+                    .addGap(362, 362, 362)
+                    .addComponent(refreshDoc)
+                    .addContainerGap(59, Short.MAX_VALUE)))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(YesButton))
                 .addGap(77, 77, 77))
+            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel10Layout.createSequentialGroup()
+                    .addGap(9, 9, 9)
+                    .addComponent(refreshDoc)
+                    .addContainerGap(546, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout DoctorLayout = new javax.swing.GroupLayout(Doctor);
@@ -454,19 +532,82 @@ public class SampleCard extends javax.swing.JFrame {
         DoctorLayout.setHorizontalGroup(
             DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addGap(34, 34, 34))
         );
         DoctorLayout.setVerticalGroup(
             DoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DoctorLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
 
         jPanel1.add(Doctor, "card2");
+
+        ViewMyAppointments.setBackground(new java.awt.Color(213, 222, 238));
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(98, 138, 203));
+        jLabel9.setText("Here are details about the doctors:");
+
+        appoint.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Email", "Speciality", "Phone", "From", "To"
+            }
+        ));
+        jScrollPane4.setViewportView(appoint);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 148, Short.MAX_VALUE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
+        );
+
+        javax.swing.GroupLayout ViewMyAppointmentsLayout = new javax.swing.GroupLayout(ViewMyAppointments);
+        ViewMyAppointments.setLayout(ViewMyAppointmentsLayout);
+        ViewMyAppointmentsLayout.setHorizontalGroup(
+            ViewMyAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ViewMyAppointmentsLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+        );
+        ViewMyAppointmentsLayout.setVerticalGroup(
+            ViewMyAppointmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ViewMyAppointmentsLayout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
+        );
+
+        jPanel1.add(ViewMyAppointments, "card2");
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -480,11 +621,6 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_HomeButtonActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        InfoDetail s = new InfoDetail();
-        s.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void RecordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecordButtonActionPerformed
         // TODO add your handling code here:
@@ -510,11 +646,30 @@ public class SampleCard extends javax.swing.JFrame {
         jPanel1.revalidate();
     }//GEN-LAST:event_DoctorButtonActionPerformed
 
+    private void refreshDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshDocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_refreshDocActionPerformed
+
     private void YesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesButtonActionPerformed
         // TODO add your handling code here:
-        BookAppointment a= new BookAppointment();
-        a.setVisible(true);
+
     }//GEN-LAST:event_YesButtonActionPerformed
+
+    private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
+
+    }//GEN-LAST:event_editActionPerformed
+
+    private void myAppointmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myAppointmentsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_myAppointmentsActionPerformed
+
+    private void myAppointmentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myAppointmentsMouseClicked
+        // TODO add your handling code here:
+        jPanel1.removeAll();
+        jPanel1.add(ViewMyAppointments);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_myAppointmentsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -552,29 +707,32 @@ public class SampleCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable DocTable;
     private javax.swing.JPanel Doctor;
     private javax.swing.JButton DoctorButton;
-    private javax.swing.JTable DoctorTable;
     private javax.swing.JPanel Home;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel Medicine;
     private javax.swing.JButton MedicineButton;
     private javax.swing.JPanel MyRecords;
-    private javax.swing.JTable PrescriptionTable;
     private javax.swing.JButton RecordButton;
     private javax.swing.JPanel SideMenu;
+    private javax.swing.JPanel ViewMyAppointments;
     private javax.swing.JButton YesButton;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel age;
+    private javax.swing.JButton all;
+    private javax.swing.JTable appoint;
+    private javax.swing.JLabel bloodtype;
+    private javax.swing.JButton edit;
+    private javax.swing.JLabel gender;
+    private javax.swing.JLabel hello;
+    private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
@@ -582,14 +740,87 @@ public class SampleCard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JButton latest;
+    private javax.swing.JTable medTable;
+    private javax.swing.JButton myAppointments;
+    private javax.swing.JLabel name;
+    private javax.swing.JButton refreshDoc;
+    private javax.swing.JLabel welcome;
     // End of variables declaration//GEN-END:variables
 
     public JTable getjTable1() {
-        return PrescriptionTable;
+        return medTable;
+    }
+    public void editIt(ActionListener listener){
+        edit.addActionListener(listener);
+    }
+    public void prof(ActionListener listener){
+        RecordButton.addActionListener(listener);
+    }
+
+    public JLabel getAge() {
+        return age;
+    }
+
+    public JLabel getBloodtype() {
+        return bloodtype;
+    }
+
+    public JLabel getGender() {
+        return gender;
+    }
+
+    public JLabel getHello() {
+        return hello;
+    }
+
+    public JLabel getTheName() {
+        return name;
+    }
+    
+    public void refreshDoctor(ActionListener listener){
+    refreshDoc.addActionListener(listener);
+    }
+    public void Book(ActionListener listener){
+    YesButton.addActionListener(listener);
+    }
+    public JTable getDocTable() {
+        return DocTable;
+    }
+
+    public JLabel getWelcome() {
+        return welcome;
+    }
+
+    public JLabel getId() {
+        return id;
+    }
+
+    public void setPrescription(ActionListener listener){
+    MedicineButton.addActionListener(listener);
+    }
+
+    public JTable getPrescriptionTable() {
+        return medTable;
+    }
+    public void getAllPrescription(ActionListener listener){
+        all.addActionListener(listener);
+    }
+    public void getLatestPrescription(ActionListener listener){
+        latest.addActionListener(listener);
+    }
+
+    public JTable getAppointmentTable() {
+        return appoint;
+    }
+    public void getAppointings(ActionListener listener){
+        myAppointments.addActionListener(listener);
     }
 }

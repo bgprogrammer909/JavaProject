@@ -4,6 +4,11 @@
  */
 package clinicandpharmacymanagement.view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JCheckBox;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author ACER
@@ -28,7 +33,7 @@ public class ResetView extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        userName = new javax.swing.JTextField();
+        userEmail = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -38,8 +43,8 @@ public class ResetView extends javax.swing.JFrame {
         newPassword = new javax.swing.JPasswordField();
         retypePassword = new javax.swing.JPasswordField();
         retypeVisible = new javax.swing.JCheckBox();
-        retypeVisible1 = new javax.swing.JCheckBox();
-        retypeVisible2 = new javax.swing.JCheckBox();
+        newVisible = new javax.swing.JCheckBox();
+        oldVisible = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,16 +53,16 @@ public class ResetView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("RESET PASSWORD");
 
-        userName.addActionListener(new java.awt.event.ActionListener() {
+        userEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userNameActionPerformed(evt);
+                userEmailActionPerformed(evt);
             }
         });
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel4.setText("Username");
+        jLabel4.setText("Email");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 153, 0));
@@ -106,17 +111,17 @@ public class ResetView extends javax.swing.JFrame {
             }
         });
 
-        retypeVisible1.setText("show");
-        retypeVisible1.addActionListener(new java.awt.event.ActionListener() {
+        newVisible.setText("show");
+        newVisible.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                retypeVisible1ActionPerformed(evt);
+                newVisibleActionPerformed(evt);
             }
         });
 
-        retypeVisible2.setText("show");
-        retypeVisible2.addActionListener(new java.awt.event.ActionListener() {
+        oldVisible.setText("show");
+        oldVisible.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                retypeVisible2ActionPerformed(evt);
+                oldVisibleActionPerformed(evt);
             }
         });
 
@@ -137,15 +142,15 @@ public class ResetView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(userName)
+                            .addComponent(userEmail)
                             .addComponent(oldPassword)
                             .addComponent(newPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                             .addComponent(retypePassword, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(retypeVisible, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(retypeVisible1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(retypeVisible2)))
+                            .addComponent(newVisible, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(oldVisible)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addComponent(jLabel1)))
@@ -168,18 +173,18 @@ public class ResetView extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(userEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(oldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(retypeVisible2))))
+                            .addComponent(oldVisible))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
                         .addComponent(newPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(retypeVisible1))
+                    .addComponent(newVisible))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -193,9 +198,9 @@ public class ResetView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameActionPerformed
+    private void userEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userNameActionPerformed
+    }//GEN-LAST:event_userEmailActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
         // TODO add your handling code here:
@@ -217,13 +222,13 @@ public class ResetView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_retypeVisibleActionPerformed
 
-    private void retypeVisible1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retypeVisible1ActionPerformed
+    private void newVisibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newVisibleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_retypeVisible1ActionPerformed
+    }//GEN-LAST:event_newVisibleActionPerformed
 
-    private void retypeVisible2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retypeVisible2ActionPerformed
+    private void oldVisibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oldVisibleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_retypeVisible2ActionPerformed
+    }//GEN-LAST:event_oldVisibleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,12 +274,52 @@ public class ResetView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPasswordField newPassword;
+    private javax.swing.JCheckBox newVisible;
     private javax.swing.JPasswordField oldPassword;
+    private javax.swing.JCheckBox oldVisible;
     private javax.swing.JButton resetButton;
     private javax.swing.JPasswordField retypePassword;
     private javax.swing.JCheckBox retypeVisible;
-    private javax.swing.JCheckBox retypeVisible1;
-    private javax.swing.JCheckBox retypeVisible2;
-    private javax.swing.JTextField userName;
+    private javax.swing.JTextField userEmail;
     // End of variables declaration//GEN-END:variables
+
+    public JPasswordField getNewPassword() {
+        return newPassword;
+    }
+
+    public JPasswordField getOldPassword() {
+        return oldPassword;
+    }
+
+    public JPasswordField getRetypePassword() {
+        return retypePassword;
+    }
+
+    public JTextField getUserName() {
+        return userEmail;
+    }
+
+    public JCheckBox getNewVisible() {
+        return newVisible;
+    }
+
+    public JCheckBox getOldVisible() {
+        return oldVisible;
+    }
+
+    public JCheckBox getRetypeVisible() {
+        return retypeVisible;
+    }
+    public void showOldPassword(ActionListener listener){
+        oldVisible.addActionListener(listener);
+    }           
+    public void showNewPassword(ActionListener listener){
+        newVisible.addActionListener(listener);
+    }           
+    public void showRetypePassword(ActionListener listener){
+        retypeVisible.addActionListener(listener);
+    }
+        public void reset(ActionListener listener){
+        resetButton.addActionListener(listener);
+    }
 }

@@ -4,54 +4,70 @@
  */
 package clinicandpharmacymanagement.view.model;
 
-import java.util.Date;
-
-
 
 /**
  *
  * @author AngkitKharel
  */
 public class DoctorModel {
-    private String  medicinename;
-
-    public String getMedicinename() {
-        return medicinename;
-    }
-
-    public void setMedicinename(String medicinename) {
-        this.medicinename = medicinename;
-    }
-
-    public Date getExpirydate() {
-        return expirydate;
-    }
-
-    public void setExpirydate(Date expirydate) {
-        this.expirydate = expirydate;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-    private int unit;
-    private Date expirydate;
     private String id;
-    private String price;
+    private String name;
+    private String email;
+    private String phone;
+    private String speciality;
+    private String timeFrom;
+    private String timeTo;
 
-    public DoctorModel(String medicinename, int unit, Date expirydate, String id, String price) {
-        this.medicinename = medicinename;
-        this.unit = unit;
-        this.expirydate = expirydate;
-        this.id = id;
-        this.price = price;
+    public DoctorModel(String name, String email, String speciality, String phone, String timeFrom, String timeTo) {
+        this.name = name;
+        this.email = email;
+        this.speciality=speciality;
+        this.phone = phone;
+        this.timeFrom = timeFrom;
+        this.timeTo = timeTo;
     }
-     
-     
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getTimeFrom() {
+        return timeFrom;
+    }
+
+    public String getTimeTo() {
+        return timeTo;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
+   
 }
+
+   
+   
+
          
      
