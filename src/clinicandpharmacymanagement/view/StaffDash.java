@@ -48,7 +48,6 @@ public class StaffDash extends javax.swing.JFrame {
         pharmacy = new javax.swing.JButton();
         prescription = new javax.swing.JButton();
         billing = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         parent = new javax.swing.JPanel();
@@ -181,18 +180,6 @@ public class StaffDash extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("LOGOUT");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
-            }
-        });
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -209,7 +196,6 @@ public class StaffDash extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6)
                             .addComponent(billing)
                             .addComponent(prescription)
                             .addComponent(appointbtn))
@@ -228,8 +214,6 @@ public class StaffDash extends javax.swing.JFrame {
                 .addComponent(prescription)
                 .addGap(40, 40, 40)
                 .addComponent(billing)
-                .addGap(42, 42, 42)
-                .addComponent(jButton6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -803,11 +787,6 @@ public class StaffDash extends javax.swing.JFrame {
        
     }//GEN-LAST:event_billingActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-     
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void appointbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointbtnMouseClicked
         // TODO add your handling code here:
         parent.removeAll();
@@ -863,11 +842,6 @@ public class StaffDash extends javax.swing.JFrame {
                            
 
     }//GEN-LAST:event_billingMouseClicked
-
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
-           
-    }//GEN-LAST:event_jButton6MouseClicked
 
     private void soldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soldActionPerformed
         // TODO add your handling code here:
@@ -956,7 +930,6 @@ public class StaffDash extends javax.swing.JFrame {
     private javax.swing.JTextField expire;
     private javax.swing.JButton give;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton6;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;

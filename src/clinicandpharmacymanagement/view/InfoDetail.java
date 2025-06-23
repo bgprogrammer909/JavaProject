@@ -41,7 +41,6 @@ public class InfoDetail extends javax.swing.JFrame {
         blood = new javax.swing.JTextField();
         doneBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        GoBack = new javax.swing.JButton();
         gender = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -99,16 +98,6 @@ public class InfoDetail extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(98, 138, 203));
         jLabel2.setText("Fill in all the text areas");
 
-        GoBack.setBackground(new java.awt.Color(138, 174, 224));
-        GoBack.setFont(new java.awt.Font("Segoe UI Black", 1, 10)); // NOI18N
-        GoBack.setForeground(new java.awt.Color(255, 255, 255));
-        GoBack.setText("Go back");
-        GoBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GoBackActionPerformed(evt);
-            }
-        });
-
         gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
         gender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,13 +130,8 @@ public class InfoDetail extends javax.swing.JFrame {
                 .addContainerGap(76, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(doneBtn)
-                        .addGap(131, 131, 131))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(GoBack)
-                        .addGap(14, 14, 14))))
+                .addComponent(doneBtn)
+                .addGap(131, 131, 131))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,9 +156,7 @@ public class InfoDetail extends javax.swing.JFrame {
                     .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(doneBtn)
-                .addGap(18, 18, 18)
-                .addComponent(GoBack, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addGap(51, 51, 51))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -219,11 +201,6 @@ public class InfoDetail extends javax.swing.JFrame {
     private void bloodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloodActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bloodActionPerformed
-
-    private void GoBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoBackActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_GoBackActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
@@ -273,7 +250,6 @@ public class InfoDetail extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton GoBack;
     private javax.swing.JTextField age;
     private javax.swing.JTextField blood;
     private javax.swing.JButton doneBtn;
