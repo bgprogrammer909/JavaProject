@@ -199,14 +199,7 @@ public class Paymentdash extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
   // Check if MainDashboard exists in your project
-    try {
-        MainDashboard main = new MainDashboard();
-        main.setVisible(true);  // Open MainDashboard window
-        this.dispose();         // Close the current Paymentdash window
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "MainDashboard not found or failed to load.", "Navigation Error", JOptionPane.ERROR_MESSAGE);
-        e.printStackTrace();
-    }      
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
