@@ -4,6 +4,7 @@
  */
 package clinicandpharmacymanagement.controller;
 
+import clinicandpharmacymanagement.Controller.SMTPSController;
 import clinicandpharmacymanagement.Dao.UserDao;
 import clinicandpharmacymanagement.view.AdminDashboardPharma;
 
@@ -15,6 +16,8 @@ import javax.swing.JOptionPane;
 import clinicandpharmacymanagement.view.LoginView;
 import clinicandpharmacymanagement.view.SampleCard;
 import clinicandpharmacymanagement.view.StaffDash;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  *
@@ -29,6 +32,7 @@ public class LoginController {
         this.view.loginIt(loginUser);
         ShowPasswordControl pcon=new ShowPasswordControl();
         this.view.showPassword(pcon);
+        this.view.forgotPassword( new RPass());
     }
     
     public void open(){
@@ -86,8 +90,67 @@ public class LoginController {
                     close();
                 }
                 
-            
-        }}}}
+    
+        }}}
+class RPass implements MouseListener {
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        String email = JOptionPane.showInputDialog(view, "Enter your email:");
+        if (email == null || email.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(view, "Email field was empty");
+            return;
+        }
+
+        UserDao useDao = new UserDao();
+        boolean emailExists = useDao.checkEmail(email);
+        if (!emailExists) {
+            JOptionPane.showMessageDialog(view, "No user found");
+            return;
+        }
+
+        // Generate a random 6-digit OTP
+        String otp = String.format("%06d", new java.util.Random().nextInt(999999));
+        String title = "Reset Password Verification";
+        String body = otp + " is the OTP to reset your password.";
+
+        boolean emailSent = SMTPSController.sendMail(email, title, body);
+        if (!emailSent) {
+            JOptionPane.showMessageDialog(view, "Failed to send OTP. Please try again.");
+            return;
+        }
+
+        String receivedOtp = JOptionPane.showInputDialog(view, "Enter the OTP:");
+        if (receivedOtp == null || receivedOtp.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(view, "OTP field was empty");
+            return;
+        }
+
+        if (!otp.equals(receivedOtp.trim())) {
+            JOptionPane.showMessageDialog(view, "Invalid OTP");
+            return;
+        }
+
+        String newPassword = JOptionPane.showInputDialog(view, "Enter the new password:");
+        if (newPassword == null || newPassword.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(view, "Password field was empty");
+            return;
+        }
+
+        boolean passwordChanged = useDao.resetPassword(email, newPassword);
+        if (!passwordChanged) {
+            JOptionPane.showMessageDialog(view, "Failed to reset password");
+        } else {
+            JOptionPane.showMessageDialog(view, "Password has been changed!");
+        }
+    }
+
+    // Other MouseListener methods (empty implementations)
+    @Override public void mousePressed(MouseEvent e) {}
+    @Override public void mouseReleased(MouseEvent e) {}
+    @Override public void mouseEntered(MouseEvent e) {}
+    @Override public void mouseExited(MouseEvent e) {}
+}
+}
         
         
     
