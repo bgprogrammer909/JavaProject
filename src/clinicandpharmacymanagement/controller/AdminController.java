@@ -136,7 +136,10 @@ public class AdminController {
             boolean result=userDao.registerStaff(user);
             if (result){
                 JOptionPane.showMessageDialog(view,"STAFF ADDED SUCESSFULLY!!!!!");
-                
+                  view.getNameTextField().setText("");
+                  view.getEmailTextField().setText("");
+                  view.getPasswordField().setText("");
+
             }else{
              JOptionPane.showMessageDialog(view,"SOMETHINGS' GONE WRONG!!!!!");   
             }
@@ -197,6 +200,10 @@ public class AdminController {
             boolean result = doctorDao.addDoctor(doctor);
             if (result) {
                 JOptionPane.showMessageDialog(view, "DOCTOR ADDED SUCCESSFULLY!!!!!");
+                 view.getDocName().setText("");
+                 view.getDocEmail().setText("");
+                 view.getSpeciality().setText("");
+                 view.getPhone().setText("");
             } else {
                 JOptionPane.showMessageDialog(view, "SOMETHING'S GONE WRONG!!!!!");
             }

@@ -27,6 +27,9 @@ public class InfoDetailController {
         this.req=req;
         this.view.updateProfile(new Profile());
     }
+     public void close(){
+        view.dispose();
+    }
     
 public class Profile implements ActionListener {
     
@@ -74,6 +77,7 @@ public class Profile implements ActionListener {
             
             if (success) {
                 showSuccess("Profile updated successfully!");
+                view.dispose();
                
             } else {
                 showError("Failed to update profile");
@@ -105,7 +109,5 @@ public class Profile implements ActionListener {
     view.setVisible(true);
 }
     
-    public void close(){
-        view.dispose();
-    }
+   
 }
