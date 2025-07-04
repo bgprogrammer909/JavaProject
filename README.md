@@ -1,3 +1,4 @@
+create a readme file the following comntent
 Project Overview
 The Pharmacy & Clinic Management System is a comprehensive Java-based desktop application designed to streamline operations in Nepali pharmacies and clinics. This system enhances healthcare management by integrating patient records, inventory control, prescription handling, and administrative tasks into a single platform.
 
@@ -112,4 +113,3 @@ Trello Board (Task Tracking)
 Contact
 For inquiries or support, reach out to:
 📧 your-email@example.com
-
